@@ -1,0 +1,9 @@
+__pycache__/
+.venv/
+outputs/
+*.pyc
+*.pt
+*.bin
+*.safetensors
+.env
+.env.*

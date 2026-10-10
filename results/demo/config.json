@@ -1,0 +1,15 @@
+{
+  "command": "demo",
+  "output": "outputs/demo",
+  "steps": 150,
+  "batch_size": 8,
+  "lr": 0.01,
+  "seed": 42,
+  "queue_size": 256,
+  "momentum": 0.9999,
+  "temperature": 0.05,
+  "beta": 0.3,
+  "ce_weight": 0.925,
+  "delete_prob": 0,
+  "device": "cpu"
+}

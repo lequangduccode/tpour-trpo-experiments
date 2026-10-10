@@ -1,0 +1,19 @@
+{
+  "command": "train",
+  "output": "outputs/contriever_smoke",
+  "steps": 2,
+  "batch_size": 2,
+  "lr": 1e-06,
+  "seed": 42,
+  "queue_size": 8,
+  "momentum": 0.9999,
+  "temperature": 0.05,
+  "beta": 0.3,
+  "ce_weight": 0.925,
+  "delete_prob": 0.1,
+  "device": "cpu",
+  "data": "data/official_smoke.jsonl",
+  "model": "facebook/contriever",
+  "max_length": 64,
+  "normalize": false
+}

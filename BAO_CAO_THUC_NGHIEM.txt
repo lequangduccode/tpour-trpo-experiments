@@ -1,0 +1,29 @@
+BÁO CÁO THỬ NGHIỆM TPOUR / TRPO
+
+Môi trường: Windows, Python 3.12.9, PyTorch 2.11.0+cpu; không có CUDA.
+Nguồn: https://arxiv.org/abs/2606.17664 và https://github.com/agwaBom/TPOUR
+Commit upstream: d1d8e70326deae6ef2ea03a8cb2c0cbc60db7a78
+
+1. Phạm vi: mã thực hành một thiết bị và kiểm tra luồng chạy, chưa tái lập bài báo.
+2. Demo: 32 cặp train; 8 truy vấn test; 16 tài liệu; seed 42; 150 bước.
+3. Kết quả (thang 0 đến 1):
+untrained: {"nDCG@5": 0.3028022411058175, "Recall@5": 0.625, "MRR@5": 0.19999999999999998, "nDCG@10": 0.4312871474810392, "Recall@10": 1.0, "MRR@10": 0.25729166666666664}
+ce_only: {"nDCG@5": 1.0, "Recall@5": 1.0, "MRR@5": 1.0, "nDCG@10": 1.0, "Recall@10": 1.0, "MRR@10": 1.0}
+tpour: {"nDCG@5": 1.0, "Recall@5": 1.0, "MRR@5": 1.0, "nDCG@10": 1.0, "Recall@10": 1.0, "MRR@10": 1.0}
+
+4. Nhận xét: CE-only và TPOUR cùng đạt điểm tối đa. Dữ liệu quá đơn giản để kết luận TRPO vượt CE.
+5. Kiểm tra: 5 unit tests đạt; nạp lại checkpoint và đánh giá đạt; đã lưu checkpoint nội suy; pipeline dữ liệu thô tạo được 2 cặp.
+6. BEIR: có script đánh giá nhưng chưa chạy benchmark; chưa có số liệu BEIR thực tế.
+7. Không có 11 PDF trong workspace ban đầu nên chưa so sánh độ dễ của 11 bài.
+8. Hướng dẫn chi tiết, các khác biệt với upstream và lệnh chạy: README.md.
+
+9. Kiểm tra với Contriever thật:
+   - Transformers 4.57.6 đã cài trong .venv; trọng số facebook/contriever tải thành công.
+   - Lấy 8 dòng đầu từ 3.000 mẫu của tác giả, chạy 2 bước, batch size 2.
+   - Queue 8; max length 64; learning rate 1e-6; chạy trên CPU.
+   - Loss tổng bước 1: 0.04648285; bước 2: 0.27002209. Hai batch khác nhau nên không suy ra xu hướng hội tụ.
+   - Checkpoint: outputs/contriever_smoke/encoder.pt (438.008.753 byte).
+   - Lịch sử loss: outputs/contriever_smoke/train_log.json.
+   - Mục tiêu kiểm tra: xác nhận forward, backward, cập nhật reference và lưu mô hình thật.
+   - Đã nạp lại checkpoint và chạy retrieval trên tập giả lập 8 truy vấn/16 tài liệu; kết quả lưu ở outputs/contriever_smoke/synthetic_reload_check.json. Đây vẫn là dữ liệu giả lập, không phải BEIR.
+   - Không dùng số liệu này để kết luận ưu thế retrieval hoặc tái lập bảng trong bài báo.
