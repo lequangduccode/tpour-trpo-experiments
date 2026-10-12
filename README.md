@@ -1,5 +1,9 @@
 # Thử nghiệm TPOUR / TRPO
 
+## Báo cáo và slide thuyết trình
+
+Bộ tài liệu hoàn thiện ngày 12/10/2026 nằm tại [reports/](reports/README.md): [báo cáo Word chi tiết](reports/Bao_cao_chi_tiet_TPOUR_TRPO.docx), [bản DOC](reports/Bao_cao_chi_tiet_TPOUR_TRPO.doc), [PDF](reports/Bao_cao_chi_tiet_TPOUR_TRPO.pdf), [PowerPoint 19 slide](reports/Slide_thuyet_trinh_TPOUR_TRPO.pptx), [kịch bản thuyết trình](reports/Kich_ban_thuyet_trinh_TPOUR_TRPO.docx) và ảnh chụp demo. Có kết quả chạy bổ sung ba seed và log gốc; chưa đánh giá BEIR đầy đủ. Điền thông tin sinh viên/giảng viên trên bìa trước khi nộp.
+
 Tải repository cùng mã nguồn tác giả bằng `git clone --recurse-submodules <URL-repository>`. Nếu đã clone thông thường, chạy `git submodule update --init --recursive`.
 
 Bộ mã thử nghiệm một thiết bị, có thể chạy trên CPU hoặc GPU. Mã chính thức được giữ tại `upstream/TPOUR`; bản triển khai gọn nằm trong `tpour.py`. Đây là bản thực hành, chưa phải tái lập toàn bộ kết quả công bố.

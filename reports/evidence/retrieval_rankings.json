@@ -1,0 +1,1949 @@
+{
+  "queries": [
+    {
+      "_id": "32",
+      "text": "How does Organization32 currently provide its service?"
+    },
+    {
+      "_id": "33",
+      "text": "How does Organization33 currently provide its service?"
+    },
+    {
+      "_id": "34",
+      "text": "How does Organization34 currently provide its service?"
+    },
+    {
+      "_id": "35",
+      "text": "How does Organization35 currently provide its service?"
+    },
+    {
+      "_id": "36",
+      "text": "How does Organization36 currently provide its service?"
+    },
+    {
+      "_id": "37",
+      "text": "How does Organization37 currently provide its service?"
+    },
+    {
+      "_id": "38",
+      "text": "How does Organization38 currently provide its service?"
+    },
+    {
+      "_id": "39",
+      "text": "How does Organization39 currently provide its service?"
+    }
+  ],
+  "corpus": [
+    {
+      "_id": "32-old",
+      "text": "Organization32 uses paper forms and provides office desk service.",
+      "timestamp": "2018"
+    },
+    {
+      "_id": "32-new",
+      "text": "Organization32 uses a digital portal and provides online mobile service.",
+      "timestamp": "2021"
+    },
+    {
+      "_id": "33-old",
+      "text": "Organization33 uses paper forms and provides office desk service.",
+      "timestamp": "2018"
+    },
+    {
+      "_id": "33-new",
+      "text": "Organization33 uses a digital portal and provides online mobile service.",
+      "timestamp": "2021"
+    },
+    {
+      "_id": "34-old",
+      "text": "Organization34 uses paper forms and provides office desk service.",
+      "timestamp": "2018"
+    },
+    {
+      "_id": "34-new",
+      "text": "Organization34 uses a digital portal and provides online mobile service.",
+      "timestamp": "2021"
+    },
+    {
+      "_id": "35-old",
+      "text": "Organization35 uses paper forms and provides office desk service.",
+      "timestamp": "2018"
+    },
+    {
+      "_id": "35-new",
+      "text": "Organization35 uses a digital portal and provides online mobile service.",
+      "timestamp": "2021"
+    },
+    {
+      "_id": "36-old",
+      "text": "Organization36 uses paper forms and provides office desk service.",
+      "timestamp": "2018"
+    },
+    {
+      "_id": "36-new",
+      "text": "Organization36 uses a digital portal and provides online mobile service.",
+      "timestamp": "2021"
+    },
+    {
+      "_id": "37-old",
+      "text": "Organization37 uses paper forms and provides office desk service.",
+      "timestamp": "2018"
+    },
+    {
+      "_id": "37-new",
+      "text": "Organization37 uses a digital portal and provides online mobile service.",
+      "timestamp": "2021"
+    },
+    {
+      "_id": "38-old",
+      "text": "Organization38 uses paper forms and provides office desk service.",
+      "timestamp": "2018"
+    },
+    {
+      "_id": "38-new",
+      "text": "Organization38 uses a digital portal and provides online mobile service.",
+      "timestamp": "2021"
+    },
+    {
+      "_id": "39-old",
+      "text": "Organization39 uses paper forms and provides office desk service.",
+      "timestamp": "2018"
+    },
+    {
+      "_id": "39-new",
+      "text": "Organization39 uses a digital portal and provides online mobile service.",
+      "timestamp": "2021"
+    }
+  ],
+  "rankings": {
+    "base": {
+      "32": [
+        {
+          "id": "32-old",
+          "text": "Organization32 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.1467924565076828,
+          "relevant": false
+        },
+        {
+          "id": "35-old",
+          "text": "Organization35 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.1114707738161087,
+          "relevant": false
+        },
+        {
+          "id": "33-old",
+          "text": "Organization33 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.10414715111255646,
+          "relevant": false
+        },
+        {
+          "id": "34-old",
+          "text": "Organization34 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.09141318500041962,
+          "relevant": false
+        },
+        {
+          "id": "32-new",
+          "text": "Organization32 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.0837622582912445,
+          "relevant": true
+        },
+        {
+          "id": "37-old",
+          "text": "Organization37 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.08319582045078278,
+          "relevant": false
+        },
+        {
+          "id": "38-old",
+          "text": "Organization38 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.08273757994174957,
+          "relevant": false
+        },
+        {
+          "id": "35-new",
+          "text": "Organization35 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.04915847256779671,
+          "relevant": false
+        },
+        {
+          "id": "36-old",
+          "text": "Organization36 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.04158525541424751,
+          "relevant": false
+        },
+        {
+          "id": "33-new",
+          "text": "Organization33 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.04098885506391525,
+          "relevant": false
+        },
+        {
+          "id": "34-new",
+          "text": "Organization34 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.029632940888404846,
+          "relevant": false
+        },
+        {
+          "id": "38-new",
+          "text": "Organization38 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.02196931280195713,
+          "relevant": false
+        },
+        {
+          "id": "39-old",
+          "text": "Organization39 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.021627219393849373,
+          "relevant": false
+        },
+        {
+          "id": "37-new",
+          "text": "Organization37 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.0178997702896595,
+          "relevant": false
+        },
+        {
+          "id": "36-new",
+          "text": "Organization36 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": -0.022925835102796555,
+          "relevant": false
+        },
+        {
+          "id": "39-new",
+          "text": "Organization39 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": -0.047296397387981415,
+          "relevant": false
+        }
+      ],
+      "33": [
+        {
+          "id": "33-old",
+          "text": "Organization33 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.21874238550662994,
+          "relevant": false
+        },
+        {
+          "id": "33-new",
+          "text": "Organization33 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.159367635846138,
+          "relevant": true
+        },
+        {
+          "id": "35-old",
+          "text": "Organization35 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.11967658251523972,
+          "relevant": false
+        },
+        {
+          "id": "34-old",
+          "text": "Organization34 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.11797686666250229,
+          "relevant": false
+        },
+        {
+          "id": "32-old",
+          "text": "Organization32 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.0980815440416336,
+          "relevant": false
+        },
+        {
+          "id": "37-old",
+          "text": "Organization37 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.093632273375988,
+          "relevant": false
+        },
+        {
+          "id": "36-old",
+          "text": "Organization36 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.08728760480880737,
+          "relevant": false
+        },
+        {
+          "id": "38-old",
+          "text": "Organization38 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.07728046923875809,
+          "relevant": false
+        },
+        {
+          "id": "34-new",
+          "text": "Organization34 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.05577842891216278,
+          "relevant": false
+        },
+        {
+          "id": "35-new",
+          "text": "Organization35 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.05461903661489487,
+          "relevant": false
+        },
+        {
+          "id": "39-old",
+          "text": "Organization39 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.04450266435742378,
+          "relevant": false
+        },
+        {
+          "id": "32-new",
+          "text": "Organization32 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.02877284586429596,
+          "relevant": false
+        },
+        {
+          "id": "37-new",
+          "text": "Organization37 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.02585454285144806,
+          "relevant": false
+        },
+        {
+          "id": "36-new",
+          "text": "Organization36 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.02290891855955124,
+          "relevant": false
+        },
+        {
+          "id": "38-new",
+          "text": "Organization38 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.012648914009332657,
+          "relevant": false
+        },
+        {
+          "id": "39-new",
+          "text": "Organization39 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": -0.026603393256664276,
+          "relevant": false
+        }
+      ],
+      "34": [
+        {
+          "id": "34-old",
+          "text": "Organization34 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.23012563586235046,
+          "relevant": false
+        },
+        {
+          "id": "35-old",
+          "text": "Organization35 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.15722213685512543,
+          "relevant": false
+        },
+        {
+          "id": "33-old",
+          "text": "Organization33 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.13690203428268433,
+          "relevant": false
+        },
+        {
+          "id": "37-old",
+          "text": "Organization37 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.13079549372196198,
+          "relevant": false
+        },
+        {
+          "id": "34-new",
+          "text": "Organization34 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.12112905830144882,
+          "relevant": true
+        },
+        {
+          "id": "38-old",
+          "text": "Organization38 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.11059124767780304,
+          "relevant": false
+        },
+        {
+          "id": "36-old",
+          "text": "Organization36 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.10677552223205566,
+          "relevant": false
+        },
+        {
+          "id": "32-old",
+          "text": "Organization32 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.10477154701948166,
+          "relevant": false
+        },
+        {
+          "id": "39-old",
+          "text": "Organization39 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.08359700441360474,
+          "relevant": false
+        },
+        {
+          "id": "35-new",
+          "text": "Organization35 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.03719612583518028,
+          "relevant": false
+        },
+        {
+          "id": "33-new",
+          "text": "Organization33 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.015122255310416222,
+          "relevant": false
+        },
+        {
+          "id": "37-new",
+          "text": "Organization37 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.006298521533608437,
+          "relevant": false
+        },
+        {
+          "id": "38-new",
+          "text": "Organization38 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": -0.007844771258533001,
+          "relevant": false
+        },
+        {
+          "id": "36-new",
+          "text": "Organization36 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": -0.011856092140078545,
+          "relevant": false
+        },
+        {
+          "id": "32-new",
+          "text": "Organization32 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": -0.02328391559422016,
+          "relevant": false
+        },
+        {
+          "id": "39-new",
+          "text": "Organization39 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": -0.04328387230634689,
+          "relevant": false
+        }
+      ],
+      "35": [
+        {
+          "id": "35-old",
+          "text": "Organization35 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.23250077664852142,
+          "relevant": false
+        },
+        {
+          "id": "35-new",
+          "text": "Organization35 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.17077530920505524,
+          "relevant": true
+        },
+        {
+          "id": "34-old",
+          "text": "Organization34 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.12381531298160553,
+          "relevant": false
+        },
+        {
+          "id": "38-old",
+          "text": "Organization38 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.10654730349779129,
+          "relevant": false
+        },
+        {
+          "id": "33-old",
+          "text": "Organization33 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.10560743510723114,
+          "relevant": false
+        },
+        {
+          "id": "37-old",
+          "text": "Organization37 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.0936993882060051,
+          "relevant": false
+        },
+        {
+          "id": "32-old",
+          "text": "Organization32 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.09099064767360687,
+          "relevant": false
+        },
+        {
+          "id": "36-old",
+          "text": "Organization36 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.08600232005119324,
+          "relevant": false
+        },
+        {
+          "id": "39-old",
+          "text": "Organization39 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.06069421395659447,
+          "relevant": false
+        },
+        {
+          "id": "34-new",
+          "text": "Organization34 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.057986196130514145,
+          "relevant": false
+        },
+        {
+          "id": "38-new",
+          "text": "Organization38 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.04088972508907318,
+          "relevant": false
+        },
+        {
+          "id": "33-new",
+          "text": "Organization33 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.03511609509587288,
+          "relevant": false
+        },
+        {
+          "id": "37-new",
+          "text": "Organization37 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.021587319672107697,
+          "relevant": false
+        },
+        {
+          "id": "36-new",
+          "text": "Organization36 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.017512664198875427,
+          "relevant": false
+        },
+        {
+          "id": "32-new",
+          "text": "Organization32 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.01699233055114746,
+          "relevant": false
+        },
+        {
+          "id": "39-new",
+          "text": "Organization39 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": -0.01378258690237999,
+          "relevant": false
+        }
+      ],
+      "36": [
+        {
+          "id": "36-old",
+          "text": "Organization36 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.24128971993923187,
+          "relevant": false
+        },
+        {
+          "id": "35-old",
+          "text": "Organization35 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.19738012552261353,
+          "relevant": false
+        },
+        {
+          "id": "34-old",
+          "text": "Organization34 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.1853589415550232,
+          "relevant": false
+        },
+        {
+          "id": "33-old",
+          "text": "Organization33 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.1846124529838562,
+          "relevant": false
+        },
+        {
+          "id": "36-new",
+          "text": "Organization36 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.16489526629447937,
+          "relevant": true
+        },
+        {
+          "id": "37-old",
+          "text": "Organization37 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.1543462574481964,
+          "relevant": false
+        },
+        {
+          "id": "38-old",
+          "text": "Organization38 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.13838839530944824,
+          "relevant": false
+        },
+        {
+          "id": "32-old",
+          "text": "Organization32 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.13332296907901764,
+          "relevant": false
+        },
+        {
+          "id": "39-old",
+          "text": "Organization39 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.11964007467031479,
+          "relevant": false
+        },
+        {
+          "id": "35-new",
+          "text": "Organization35 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.11352746188640594,
+          "relevant": false
+        },
+        {
+          "id": "34-new",
+          "text": "Organization34 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.10597363859415054,
+          "relevant": false
+        },
+        {
+          "id": "33-new",
+          "text": "Organization33 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.0992283746600151,
+          "relevant": false
+        },
+        {
+          "id": "37-new",
+          "text": "Organization37 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.06709542870521545,
+          "relevant": false
+        },
+        {
+          "id": "38-new",
+          "text": "Organization38 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.05635613203048706,
+          "relevant": false
+        },
+        {
+          "id": "32-new",
+          "text": "Organization32 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.04145822674036026,
+          "relevant": false
+        },
+        {
+          "id": "39-new",
+          "text": "Organization39 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.028170280158519745,
+          "relevant": false
+        }
+      ],
+      "37": [
+        {
+          "id": "37-old",
+          "text": "Organization37 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.1686582863330841,
+          "relevant": false
+        },
+        {
+          "id": "34-old",
+          "text": "Organization34 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.1287175714969635,
+          "relevant": false
+        },
+        {
+          "id": "35-old",
+          "text": "Organization35 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.1248922273516655,
+          "relevant": false
+        },
+        {
+          "id": "33-old",
+          "text": "Organization33 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.11031094193458557,
+          "relevant": false
+        },
+        {
+          "id": "32-old",
+          "text": "Organization32 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.0942624881863594,
+          "relevant": false
+        },
+        {
+          "id": "38-old",
+          "text": "Organization38 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.0753624215722084,
+          "relevant": false
+        },
+        {
+          "id": "36-old",
+          "text": "Organization36 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.07284639775753021,
+          "relevant": false
+        },
+        {
+          "id": "37-new",
+          "text": "Organization37 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.07164041697978973,
+          "relevant": true
+        },
+        {
+          "id": "39-old",
+          "text": "Organization39 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.04726460576057434,
+          "relevant": false
+        },
+        {
+          "id": "34-new",
+          "text": "Organization34 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.03202967718243599,
+          "relevant": false
+        },
+        {
+          "id": "35-new",
+          "text": "Organization35 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.02564411051571369,
+          "relevant": false
+        },
+        {
+          "id": "33-new",
+          "text": "Organization33 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.009772665798664093,
+          "relevant": false
+        },
+        {
+          "id": "32-new",
+          "text": "Organization32 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": -0.010823210701346397,
+          "relevant": false
+        },
+        {
+          "id": "38-new",
+          "text": "Organization38 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": -0.023943418636918068,
+          "relevant": false
+        },
+        {
+          "id": "36-new",
+          "text": "Organization36 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": -0.02604205347597599,
+          "relevant": false
+        },
+        {
+          "id": "39-new",
+          "text": "Organization39 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": -0.058381784707307816,
+          "relevant": false
+        }
+      ],
+      "38": [
+        {
+          "id": "38-old",
+          "text": "Organization38 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.2516257166862488,
+          "relevant": false
+        },
+        {
+          "id": "35-old",
+          "text": "Organization35 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.20398250222206116,
+          "relevant": false
+        },
+        {
+          "id": "34-old",
+          "text": "Organization34 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.17401742935180664,
+          "relevant": false
+        },
+        {
+          "id": "32-old",
+          "text": "Organization32 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.1610548496246338,
+          "relevant": false
+        },
+        {
+          "id": "33-old",
+          "text": "Organization33 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.15841318666934967,
+          "relevant": false
+        },
+        {
+          "id": "38-new",
+          "text": "Organization38 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.1434573233127594,
+          "relevant": true
+        },
+        {
+          "id": "37-old",
+          "text": "Organization37 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.1417442113161087,
+          "relevant": false
+        },
+        {
+          "id": "36-old",
+          "text": "Organization36 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.1242704689502716,
+          "relevant": false
+        },
+        {
+          "id": "39-old",
+          "text": "Organization39 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.11814948916435242,
+          "relevant": false
+        },
+        {
+          "id": "35-new",
+          "text": "Organization35 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.08231426030397415,
+          "relevant": false
+        },
+        {
+          "id": "34-new",
+          "text": "Organization34 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.053822778165340424,
+          "relevant": false
+        },
+        {
+          "id": "33-new",
+          "text": "Organization33 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.03322628512978554,
+          "relevant": false
+        },
+        {
+          "id": "32-new",
+          "text": "Organization32 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.03146075829863548,
+          "relevant": false
+        },
+        {
+          "id": "37-new",
+          "text": "Organization37 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.01329217478632927,
+          "relevant": false
+        },
+        {
+          "id": "36-new",
+          "text": "Organization36 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.0023151859641075134,
+          "relevant": false
+        },
+        {
+          "id": "39-new",
+          "text": "Organization39 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": -0.011800741776823997,
+          "relevant": false
+        }
+      ],
+      "39": [
+        {
+          "id": "39-old",
+          "text": "Organization39 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.1433200091123581,
+          "relevant": false
+        },
+        {
+          "id": "35-old",
+          "text": "Organization35 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.13078060746192932,
+          "relevant": false
+        },
+        {
+          "id": "34-old",
+          "text": "Organization34 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.12047895044088364,
+          "relevant": false
+        },
+        {
+          "id": "33-old",
+          "text": "Organization33 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.09876013547182083,
+          "relevant": false
+        },
+        {
+          "id": "38-old",
+          "text": "Organization38 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.08999624848365784,
+          "relevant": false
+        },
+        {
+          "id": "39-new",
+          "text": "Organization39 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.08839866518974304,
+          "relevant": true
+        },
+        {
+          "id": "37-old",
+          "text": "Organization37 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.08651737123727798,
+          "relevant": false
+        },
+        {
+          "id": "35-new",
+          "text": "Organization35 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.0777602270245552,
+          "relevant": false
+        },
+        {
+          "id": "36-old",
+          "text": "Organization36 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.07676689326763153,
+          "relevant": false
+        },
+        {
+          "id": "32-old",
+          "text": "Organization32 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": 0.07147716730833054,
+          "relevant": false
+        },
+        {
+          "id": "34-new",
+          "text": "Organization34 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.0702415332198143,
+          "relevant": false
+        },
+        {
+          "id": "33-new",
+          "text": "Organization33 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.04326769337058067,
+          "relevant": false
+        },
+        {
+          "id": "38-new",
+          "text": "Organization38 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.037996627390384674,
+          "relevant": false
+        },
+        {
+          "id": "37-new",
+          "text": "Organization37 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.029913514852523804,
+          "relevant": false
+        },
+        {
+          "id": "36-new",
+          "text": "Organization36 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.022573355585336685,
+          "relevant": false
+        },
+        {
+          "id": "32-new",
+          "text": "Organization32 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.012221377342939377,
+          "relevant": false
+        }
+      ]
+    },
+    "tpour": {
+      "32": [
+        {
+          "id": "32-new",
+          "text": "Organization32 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.6378771066665649,
+          "relevant": true
+        },
+        {
+          "id": "33-new",
+          "text": "Organization33 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5726395845413208,
+          "relevant": false
+        },
+        {
+          "id": "37-new",
+          "text": "Organization37 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5638204216957092,
+          "relevant": false
+        },
+        {
+          "id": "35-new",
+          "text": "Organization35 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5633851289749146,
+          "relevant": false
+        },
+        {
+          "id": "34-new",
+          "text": "Organization34 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5561328530311584,
+          "relevant": false
+        },
+        {
+          "id": "38-new",
+          "text": "Organization38 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5328377485275269,
+          "relevant": false
+        },
+        {
+          "id": "39-new",
+          "text": "Organization39 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5015324950218201,
+          "relevant": false
+        },
+        {
+          "id": "36-new",
+          "text": "Organization36 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5009521245956421,
+          "relevant": false
+        },
+        {
+          "id": "32-old",
+          "text": "Organization32 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3202190697193146,
+          "relevant": false
+        },
+        {
+          "id": "33-old",
+          "text": "Organization33 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.34389781951904297,
+          "relevant": false
+        },
+        {
+          "id": "35-old",
+          "text": "Organization35 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3511649966239929,
+          "relevant": false
+        },
+        {
+          "id": "38-old",
+          "text": "Organization38 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3634556233882904,
+          "relevant": false
+        },
+        {
+          "id": "34-old",
+          "text": "Organization34 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.37171071767807007,
+          "relevant": false
+        },
+        {
+          "id": "37-old",
+          "text": "Organization37 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.389423131942749,
+          "relevant": false
+        },
+        {
+          "id": "36-old",
+          "text": "Organization36 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3921259939670563,
+          "relevant": false
+        },
+        {
+          "id": "39-old",
+          "text": "Organization39 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.43007349967956543,
+          "relevant": false
+        }
+      ],
+      "33": [
+        {
+          "id": "33-new",
+          "text": "Organization33 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.6753061413764954,
+          "relevant": true
+        },
+        {
+          "id": "32-new",
+          "text": "Organization32 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5767528414726257,
+          "relevant": false
+        },
+        {
+          "id": "34-new",
+          "text": "Organization34 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5737773776054382,
+          "relevant": false
+        },
+        {
+          "id": "37-new",
+          "text": "Organization37 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5642747282981873,
+          "relevant": false
+        },
+        {
+          "id": "35-new",
+          "text": "Organization35 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5608921051025391,
+          "relevant": false
+        },
+        {
+          "id": "36-new",
+          "text": "Organization36 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5365281105041504,
+          "relevant": false
+        },
+        {
+          "id": "38-new",
+          "text": "Organization38 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5171178579330444,
+          "relevant": false
+        },
+        {
+          "id": "39-new",
+          "text": "Organization39 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5133461356163025,
+          "relevant": false
+        },
+        {
+          "id": "33-old",
+          "text": "Organization33 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.22019188106060028,
+          "relevant": false
+        },
+        {
+          "id": "35-old",
+          "text": "Organization35 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3235594928264618,
+          "relevant": false
+        },
+        {
+          "id": "34-old",
+          "text": "Organization34 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.32750171422958374,
+          "relevant": false
+        },
+        {
+          "id": "36-old",
+          "text": "Organization36 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.33103346824645996,
+          "relevant": false
+        },
+        {
+          "id": "32-old",
+          "text": "Organization32 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3443467915058136,
+          "relevant": false
+        },
+        {
+          "id": "38-old",
+          "text": "Organization38 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.348864883184433,
+          "relevant": false
+        },
+        {
+          "id": "37-old",
+          "text": "Organization37 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.35946986079216003,
+          "relevant": false
+        },
+        {
+          "id": "39-old",
+          "text": "Organization39 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.38969865441322327,
+          "relevant": false
+        }
+      ],
+      "34": [
+        {
+          "id": "34-new",
+          "text": "Organization34 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.6468963027000427,
+          "relevant": true
+        },
+        {
+          "id": "35-new",
+          "text": "Organization35 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5535733699798584,
+          "relevant": false
+        },
+        {
+          "id": "37-new",
+          "text": "Organization37 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5533919930458069,
+          "relevant": false
+        },
+        {
+          "id": "33-new",
+          "text": "Organization33 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.548699676990509,
+          "relevant": false
+        },
+        {
+          "id": "32-new",
+          "text": "Organization32 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5347867012023926,
+          "relevant": false
+        },
+        {
+          "id": "36-new",
+          "text": "Organization36 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5110278129577637,
+          "relevant": false
+        },
+        {
+          "id": "38-new",
+          "text": "Organization38 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5048720240592957,
+          "relevant": false
+        },
+        {
+          "id": "39-new",
+          "text": "Organization39 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5040470361709595,
+          "relevant": false
+        },
+        {
+          "id": "34-old",
+          "text": "Organization34 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.21920931339263916,
+          "relevant": false
+        },
+        {
+          "id": "35-old",
+          "text": "Organization35 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.2834947407245636,
+          "relevant": false
+        },
+        {
+          "id": "33-old",
+          "text": "Organization33 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.2895778715610504,
+          "relevant": false
+        },
+        {
+          "id": "36-old",
+          "text": "Organization36 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.30879878997802734,
+          "relevant": false
+        },
+        {
+          "id": "38-old",
+          "text": "Organization38 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.31541112065315247,
+          "relevant": false
+        },
+        {
+          "id": "37-old",
+          "text": "Organization37 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3223192095756531,
+          "relevant": false
+        },
+        {
+          "id": "32-old",
+          "text": "Organization32 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.33413076400756836,
+          "relevant": false
+        },
+        {
+          "id": "39-old",
+          "text": "Organization39 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.35108187794685364,
+          "relevant": false
+        }
+      ],
+      "35": [
+        {
+          "id": "35-new",
+          "text": "Organization35 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.6796550154685974,
+          "relevant": true
+        },
+        {
+          "id": "34-new",
+          "text": "Organization34 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5854840278625488,
+          "relevant": false
+        },
+        {
+          "id": "32-new",
+          "text": "Organization32 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5744714140892029,
+          "relevant": false
+        },
+        {
+          "id": "37-new",
+          "text": "Organization37 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5695675015449524,
+          "relevant": false
+        },
+        {
+          "id": "33-new",
+          "text": "Organization33 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.567568838596344,
+          "relevant": false
+        },
+        {
+          "id": "38-new",
+          "text": "Organization38 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5529384016990662,
+          "relevant": false
+        },
+        {
+          "id": "36-new",
+          "text": "Organization36 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5398343205451965,
+          "relevant": false
+        },
+        {
+          "id": "39-new",
+          "text": "Organization39 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5342472195625305,
+          "relevant": false
+        },
+        {
+          "id": "35-old",
+          "text": "Organization35 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.22681336104869843,
+          "relevant": false
+        },
+        {
+          "id": "34-old",
+          "text": "Organization34 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3306087255477905,
+          "relevant": false
+        },
+        {
+          "id": "38-old",
+          "text": "Organization38 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.33088088035583496,
+          "relevant": false
+        },
+        {
+          "id": "33-old",
+          "text": "Organization33 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.33228400349617004,
+          "relevant": false
+        },
+        {
+          "id": "36-old",
+          "text": "Organization36 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3411390781402588,
+          "relevant": false
+        },
+        {
+          "id": "32-old",
+          "text": "Organization32 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.36017024517059326,
+          "relevant": false
+        },
+        {
+          "id": "37-old",
+          "text": "Organization37 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.36840328574180603,
+          "relevant": false
+        },
+        {
+          "id": "39-old",
+          "text": "Organization39 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3847357928752899,
+          "relevant": false
+        }
+      ],
+      "36": [
+        {
+          "id": "36-new",
+          "text": "Organization36 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.6771504878997803,
+          "relevant": true
+        },
+        {
+          "id": "34-new",
+          "text": "Organization34 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.625766932964325,
+          "relevant": false
+        },
+        {
+          "id": "33-new",
+          "text": "Organization33 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.6244505047798157,
+          "relevant": false
+        },
+        {
+          "id": "35-new",
+          "text": "Organization35 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.6206449270248413,
+          "relevant": false
+        },
+        {
+          "id": "37-new",
+          "text": "Organization37 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.6088264584541321,
+          "relevant": false
+        },
+        {
+          "id": "32-new",
+          "text": "Organization32 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5945020318031311,
+          "relevant": false
+        },
+        {
+          "id": "39-new",
+          "text": "Organization39 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5718600749969482,
+          "relevant": false
+        },
+        {
+          "id": "38-new",
+          "text": "Organization38 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.562908411026001,
+          "relevant": false
+        },
+        {
+          "id": "36-old",
+          "text": "Organization36 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.22053641080856323,
+          "relevant": false
+        },
+        {
+          "id": "33-old",
+          "text": "Organization33 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.28387823700904846,
+          "relevant": false
+        },
+        {
+          "id": "35-old",
+          "text": "Organization35 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.2853145897388458,
+          "relevant": false
+        },
+        {
+          "id": "34-old",
+          "text": "Organization34 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.2996143400669098,
+          "relevant": false
+        },
+        {
+          "id": "38-old",
+          "text": "Organization38 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3258077800273895,
+          "relevant": false
+        },
+        {
+          "id": "37-old",
+          "text": "Organization37 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.339003324508667,
+          "relevant": false
+        },
+        {
+          "id": "32-old",
+          "text": "Organization32 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.34604981541633606,
+          "relevant": false
+        },
+        {
+          "id": "39-old",
+          "text": "Organization39 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.35512781143188477,
+          "relevant": false
+        }
+      ],
+      "37": [
+        {
+          "id": "37-new",
+          "text": "Organization37 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.6160128116607666,
+          "relevant": true
+        },
+        {
+          "id": "34-new",
+          "text": "Organization34 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5573630332946777,
+          "relevant": false
+        },
+        {
+          "id": "32-new",
+          "text": "Organization32 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5457090139389038,
+          "relevant": false
+        },
+        {
+          "id": "33-new",
+          "text": "Organization33 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5423891544342041,
+          "relevant": false
+        },
+        {
+          "id": "35-new",
+          "text": "Organization35 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5407532453536987,
+          "relevant": false
+        },
+        {
+          "id": "36-new",
+          "text": "Organization36 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.4957435429096222,
+          "relevant": false
+        },
+        {
+          "id": "39-new",
+          "text": "Organization39 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.4872370660305023,
+          "relevant": false
+        },
+        {
+          "id": "38-new",
+          "text": "Organization38 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.4866279363632202,
+          "relevant": false
+        },
+        {
+          "id": "37-old",
+          "text": "Organization37 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.2957821190357208,
+          "relevant": false
+        },
+        {
+          "id": "33-old",
+          "text": "Organization33 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.32166609168052673,
+          "relevant": false
+        },
+        {
+          "id": "34-old",
+          "text": "Organization34 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3218180239200592,
+          "relevant": false
+        },
+        {
+          "id": "35-old",
+          "text": "Organization35 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3218991458415985,
+          "relevant": false
+        },
+        {
+          "id": "36-old",
+          "text": "Organization36 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3482332229614258,
+          "relevant": false
+        },
+        {
+          "id": "32-old",
+          "text": "Organization32 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3513430058956146,
+          "relevant": false
+        },
+        {
+          "id": "38-old",
+          "text": "Organization38 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.35589107871055603,
+          "relevant": false
+        },
+        {
+          "id": "39-old",
+          "text": "Organization39 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.39245933294296265,
+          "relevant": false
+        }
+      ],
+      "38": [
+        {
+          "id": "38-new",
+          "text": "Organization38 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.6618576049804688,
+          "relevant": true
+        },
+        {
+          "id": "35-new",
+          "text": "Organization35 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.6061532497406006,
+          "relevant": false
+        },
+        {
+          "id": "32-new",
+          "text": "Organization32 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5989197492599487,
+          "relevant": false
+        },
+        {
+          "id": "34-new",
+          "text": "Organization34 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5906742811203003,
+          "relevant": false
+        },
+        {
+          "id": "33-new",
+          "text": "Organization33 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5758967995643616,
+          "relevant": false
+        },
+        {
+          "id": "37-new",
+          "text": "Organization37 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5702400207519531,
+          "relevant": false
+        },
+        {
+          "id": "39-new",
+          "text": "Organization39 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5455707311630249,
+          "relevant": false
+        },
+        {
+          "id": "36-new",
+          "text": "Organization36 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5344614386558533,
+          "relevant": false
+        },
+        {
+          "id": "38-old",
+          "text": "Organization38 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.18102525174617767,
+          "relevant": false
+        },
+        {
+          "id": "35-old",
+          "text": "Organization35 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.23478227853775024,
+          "relevant": false
+        },
+        {
+          "id": "33-old",
+          "text": "Organization33 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.26479461789131165,
+          "relevant": false
+        },
+        {
+          "id": "34-old",
+          "text": "Organization34 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.26759639382362366,
+          "relevant": false
+        },
+        {
+          "id": "32-old",
+          "text": "Organization32 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.27699071168899536,
+          "relevant": false
+        },
+        {
+          "id": "36-old",
+          "text": "Organization36 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.28772157430648804,
+          "relevant": false
+        },
+        {
+          "id": "37-old",
+          "text": "Organization37 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.308250367641449,
+          "relevant": false
+        },
+        {
+          "id": "39-old",
+          "text": "Organization39 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3144308030605316,
+          "relevant": false
+        }
+      ],
+      "39": [
+        {
+          "id": "39-new",
+          "text": "Organization39 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.6364233493804932,
+          "relevant": true
+        },
+        {
+          "id": "34-new",
+          "text": "Organization34 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5968197584152222,
+          "relevant": false
+        },
+        {
+          "id": "35-new",
+          "text": "Organization35 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5928397178649902,
+          "relevant": false
+        },
+        {
+          "id": "33-new",
+          "text": "Organization33 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5780893564224243,
+          "relevant": false
+        },
+        {
+          "id": "37-new",
+          "text": "Organization37 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5776618719100952,
+          "relevant": false
+        },
+        {
+          "id": "32-new",
+          "text": "Organization32 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5727628469467163,
+          "relevant": false
+        },
+        {
+          "id": "38-new",
+          "text": "Organization38 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.5502046942710876,
+          "relevant": false
+        },
+        {
+          "id": "36-new",
+          "text": "Organization36 uses a digital portal and provides online mobile service.",
+          "timestamp": "2021",
+          "score": 0.547295331954956,
+          "relevant": false
+        },
+        {
+          "id": "39-old",
+          "text": "Organization39 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3324337601661682,
+          "relevant": false
+        },
+        {
+          "id": "35-old",
+          "text": "Organization35 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3456217050552368,
+          "relevant": false
+        },
+        {
+          "id": "34-old",
+          "text": "Organization34 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.35796016454696655,
+          "relevant": false
+        },
+        {
+          "id": "33-old",
+          "text": "Organization33 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3605647683143616,
+          "relevant": false
+        },
+        {
+          "id": "38-old",
+          "text": "Organization38 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.369030237197876,
+          "relevant": false
+        },
+        {
+          "id": "36-old",
+          "text": "Organization36 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3712988495826721,
+          "relevant": false
+        },
+        {
+          "id": "37-old",
+          "text": "Organization37 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.3993247449398041,
+          "relevant": false
+        },
+        {
+          "id": "32-old",
+          "text": "Organization32 uses paper forms and provides office desk service.",
+          "timestamp": "2018",
+          "score": -0.4005500376224518,
+          "relevant": false
+        }
+      ]
+    }
+  },
+  "selected": "37"
+}

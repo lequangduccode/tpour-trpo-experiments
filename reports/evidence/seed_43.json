@@ -1,0 +1,334 @@
+{
+  "kind": "synthetic_cpu_smoke_test_not_paper_reproduction",
+  "seed": 43,
+  "untrained": {
+    "metrics": {
+      "nDCG@5": 0.31546487678572877,
+      "Recall@5": 0.5,
+      "MRR@5": 0.25,
+      "nDCG@10": 0.4728770235482245,
+      "Recall@10": 1.0,
+      "MRR@10": 0.3125
+    },
+    "evaluated_queries": 8,
+    "corpus_size": 16,
+    "rankings": {
+      "32": [
+        "32-old",
+        "33-old",
+        "34-old",
+        "37-old",
+        "39-old",
+        "32-new",
+        "36-old",
+        "35-old",
+        "38-old",
+        "37-new"
+      ],
+      "33": [
+        "33-old",
+        "33-new",
+        "34-old",
+        "37-old",
+        "39-old",
+        "38-old",
+        "35-old",
+        "37-new",
+        "32-old",
+        "36-old"
+      ],
+      "34": [
+        "34-old",
+        "34-new",
+        "33-old",
+        "37-old",
+        "39-old",
+        "38-old",
+        "33-new",
+        "32-old",
+        "37-new",
+        "38-new"
+      ],
+      "35": [
+        "35-old",
+        "33-old",
+        "34-old",
+        "39-old",
+        "37-old",
+        "38-old",
+        "32-old",
+        "36-old",
+        "35-new",
+        "33-new"
+      ],
+      "36": [
+        "36-old",
+        "37-old",
+        "33-old",
+        "34-old",
+        "39-old",
+        "32-old",
+        "38-old",
+        "35-old",
+        "36-new",
+        "37-new"
+      ],
+      "37": [
+        "37-old",
+        "37-new",
+        "33-old",
+        "34-old",
+        "39-old",
+        "36-old",
+        "38-old",
+        "32-old",
+        "35-old",
+        "33-new"
+      ],
+      "38": [
+        "38-old",
+        "33-old",
+        "34-old",
+        "37-old",
+        "39-old",
+        "35-old",
+        "32-old",
+        "36-old",
+        "38-new",
+        "33-new"
+      ],
+      "39": [
+        "39-old",
+        "39-new",
+        "33-old",
+        "34-old",
+        "37-old",
+        "32-old",
+        "35-old",
+        "38-old",
+        "36-old",
+        "37-new"
+      ]
+    }
+  },
+  "ce_only": {
+    "metrics": {
+      "nDCG@5": 1.0,
+      "Recall@5": 1.0,
+      "MRR@5": 1.0,
+      "nDCG@10": 1.0,
+      "Recall@10": 1.0,
+      "MRR@10": 1.0
+    },
+    "evaluated_queries": 8,
+    "corpus_size": 16,
+    "rankings": {
+      "32": [
+        "32-new",
+        "36-new",
+        "37-new",
+        "38-new",
+        "33-new",
+        "34-new",
+        "35-new",
+        "39-new",
+        "32-old",
+        "33-old"
+      ],
+      "33": [
+        "33-new",
+        "38-new",
+        "37-new",
+        "36-new",
+        "34-new",
+        "35-new",
+        "32-new",
+        "39-new",
+        "33-old",
+        "34-old"
+      ],
+      "34": [
+        "34-new",
+        "38-new",
+        "37-new",
+        "33-new",
+        "32-new",
+        "36-new",
+        "35-new",
+        "39-new",
+        "34-old",
+        "33-old"
+      ],
+      "35": [
+        "35-new",
+        "38-new",
+        "33-new",
+        "36-new",
+        "37-new",
+        "32-new",
+        "34-new",
+        "39-new",
+        "35-old",
+        "33-old"
+      ],
+      "36": [
+        "36-new",
+        "37-new",
+        "38-new",
+        "33-new",
+        "32-new",
+        "34-new",
+        "35-new",
+        "39-new",
+        "36-old",
+        "33-old"
+      ],
+      "37": [
+        "37-new",
+        "36-new",
+        "38-new",
+        "33-new",
+        "32-new",
+        "34-new",
+        "35-new",
+        "39-new",
+        "37-old",
+        "33-old"
+      ],
+      "38": [
+        "38-new",
+        "33-new",
+        "37-new",
+        "34-new",
+        "36-new",
+        "35-new",
+        "32-new",
+        "39-new",
+        "38-old",
+        "33-old"
+      ],
+      "39": [
+        "39-new",
+        "38-new",
+        "37-new",
+        "36-new",
+        "33-new",
+        "32-new",
+        "34-new",
+        "35-new",
+        "39-old",
+        "33-old"
+      ]
+    }
+  },
+  "tpour": {
+    "metrics": {
+      "nDCG@5": 1.0,
+      "Recall@5": 1.0,
+      "MRR@5": 1.0,
+      "nDCG@10": 1.0,
+      "Recall@10": 1.0,
+      "MRR@10": 1.0
+    },
+    "evaluated_queries": 8,
+    "corpus_size": 16,
+    "rankings": {
+      "32": [
+        "32-new",
+        "36-new",
+        "37-new",
+        "38-new",
+        "33-new",
+        "34-new",
+        "35-new",
+        "39-new",
+        "32-old",
+        "37-old"
+      ],
+      "33": [
+        "33-new",
+        "38-new",
+        "37-new",
+        "36-new",
+        "34-new",
+        "35-new",
+        "32-new",
+        "39-new",
+        "33-old",
+        "37-old"
+      ],
+      "34": [
+        "34-new",
+        "38-new",
+        "37-new",
+        "33-new",
+        "32-new",
+        "36-new",
+        "35-new",
+        "39-new",
+        "34-old",
+        "33-old"
+      ],
+      "35": [
+        "35-new",
+        "38-new",
+        "33-new",
+        "36-new",
+        "37-new",
+        "32-new",
+        "34-new",
+        "39-new",
+        "35-old",
+        "33-old"
+      ],
+      "36": [
+        "36-new",
+        "37-new",
+        "38-new",
+        "33-new",
+        "32-new",
+        "34-new",
+        "35-new",
+        "39-new",
+        "36-old",
+        "37-old"
+      ],
+      "37": [
+        "37-new",
+        "36-new",
+        "38-new",
+        "33-new",
+        "32-new",
+        "34-new",
+        "35-new",
+        "39-new",
+        "37-old",
+        "33-old"
+      ],
+      "38": [
+        "38-new",
+        "33-new",
+        "37-new",
+        "34-new",
+        "36-new",
+        "35-new",
+        "32-new",
+        "39-new",
+        "38-old",
+        "33-old"
+      ],
+      "39": [
+        "39-new",
+        "38-new",
+        "37-new",
+        "36-new",
+        "33-new",
+        "32-new",
+        "34-new",
+        "35-new",
+        "39-old",
+        "33-old"
+      ]
+    }
+  }
+}

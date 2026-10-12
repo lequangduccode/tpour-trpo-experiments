@@ -1,0 +1,14 @@
+$ C:\Users\Admin\AppData\Local\Programs\Python\Python312\python.exe -X utf8 -m unittest test_tpour -v
+
+test_loss_value_and_gradient_direction (test_tpour.CorrectnessTests.test_loss_value_and_gradient_direction) ... ok
+test_metrics_against_hand_calculation (test_tpour.CorrectnessTests.test_metrics_against_hand_calculation) ... ok
+test_queue_wrap_and_momentum (test_tpour.CorrectnessTests.test_queue_wrap_and_momentum) ... ok
+test_reference_is_detached (test_tpour.CorrectnessTests.test_reference_is_detached) ... ok
+test_upstream_input_format (test_tpour.CorrectnessTests.test_upstream_input_format) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.010s
+
+OK
+
+Exit code: 0

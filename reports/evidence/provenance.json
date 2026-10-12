@@ -1,0 +1,17 @@
+{
+  "captured_at": "2026-10-12T08:58:05+07:00",
+  "python": "3.12.9",
+  "torch": "2.11.0+cpu",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "cuda_available": false,
+  "source_commit": "a5409eb1635e14d0e5503f0e887c1b82953bf3e5",
+  "upstream_commit": "d1d8e70326deae6ef2ea03a8cb2c0cbc60db7a78",
+  "tpour_sha256": "074158cc6d8a42c6f61efc73b48892cac12e5432a87d15ec3456524d29c84ec6",
+  "test_exit_code": 0,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "synthetic": true
+}
