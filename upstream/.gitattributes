@@ -1,0 +1,2 @@
+# Preserve vendored files byte-for-byte across operating systems for UPSTREAM.json.
+TPOUR/** -text

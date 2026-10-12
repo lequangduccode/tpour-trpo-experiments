@@ -324,8 +324,8 @@ def build_word(summary, meta, ranking):
     r.p("Dễ viết skeleton không đồng nghĩa dễ tái lập nghiên cứu. Chi phí đáng kể nằm ở snapshot thời gian, chọn các nội dung thay đổi có ý nghĩa, mining cùng chủ đề, chống rò rỉ và tạo temporal qrels. Repository cung cấp bước khởi đầu chạy được; không có bằng chứng so sánh đủ 11 bài để khẳng định TPOUR dễ nhất. Báo cáo không sử dụng nhận định xếp hạng đó như một kết luận đã kiểm chứng.")
     r.page("13. Hướng dẫn chạy lại và trình diễn")
     r.h("13.1. Lấy mã và cài môi trường")
-    r.code("git clone --recurse-submodules `\n  https://github.com/lequangduccode/tpour-trpo-experiments.git\ncd tpour-trpo-experiments\npython -m venv .venv\n.venv\\Scripts\\python -m pip install -r requirements.txt")
-    r.p("Ví dụ lệnh dùng PowerShell; dấu backtick ở cuối dòng nối lệnh sang dòng sau. Trên Linux/macOS dùng một dòng và thay đường dẫn Python môi trường ảo bằng .venv/bin/python. Clone submodule để có đúng commit code tác giả.")
+    r.code("git clone `\n  https://github.com/lequangduccode/tpour-trpo-experiments.git\ncd tpour-trpo-experiments\npython -m venv .venv\n.venv\\Scripts\\python -m pip install -r requirements.txt")
+    r.p("Ví dụ lệnh dùng PowerShell; dấu backtick ở cuối dòng nối lệnh sang dòng sau. Trên Linux/macOS dùng một dòng và thay đường dẫn Python môi trường ảo bằng .venv/bin/python. Mã tác giả nằm trực tiếp trong upstream/TPOUR; commit và hash gốc được ghi trong upstream/UPSTREAM.json, không cần lệnh submodule.")
     r.h("13.2. Chạy demo và kiểm tra")
     r.code(".venv\\Scripts\\python -m unittest test_tpour -v\n.venv\\Scripts\\python tpour.py demo --output outputs/demo\n.venv\\Scripts\\python tpour.py evaluate `\n  --data outputs/demo/data/test `\n  --checkpoint outputs/demo/tpour/encoder.pt `\n  --output outputs/demo/recheck.json")
     r.h("13.3. Trình diễn trong 2 phút")
@@ -344,7 +344,7 @@ def build_word(summary, meta, ranking):
     r.page("Tài liệu tham khảo và nguồn bằng chứng")
     refs = [
         "[1] Kim, H.; Shim, J.; Kim, Y. J.; Bak, J. Temporal Preference Optimization for Unsupervised Retrieval. arXiv:2606.17664 (2026). " + PAPER + ". Cơ sở: mục 3 và phụ lục tái lập.",
-        "[2] agwaBom/TPOUR. Repository triển khai chính thức. https://github.com/agwaBom/TPOUR. Commit được giữ trong submodule: " + meta["upstream_commit"] + ". Tệp src/moco.py và finetune.sh.",
+        "[2] agwaBom/TPOUR. Repository triển khai chính thức. https://github.com/agwaBom/TPOUR. Mã được lưu trực tiếp trong upstream/TPOUR, tại commit gốc: " + meta["upstream_commit"] + ". Tệp src/moco.py và finetune.sh; provenance ở upstream/UPSTREAM.json.",
         "[3] Izacard và cộng sự. Towards Unsupervised Dense Information Retrieval with Contrastive Learning. https://arxiv.org/abs/2112.09118. Model card và mean pooling: https://huggingface.co/facebook/contriever.",
         "[4] Thakur và cộng sự. BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models. https://arxiv.org/abs/2104.08663. Code: https://github.com/beir-cellar/beir.",
         "[5] Rafailov và cộng sự. Direct Preference Optimization: Your Language Model is Secretly a Reward Model. https://arxiv.org/abs/2305.18290.",

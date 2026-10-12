@@ -1,0 +1,21 @@
+CUDA_VISIBLE_DEVICES=0 python ./finetuning_with_pos_neg_ctx.py \
+        --retriever_model_id facebook/contriever --pooling average \
+        --train_data 2018_sample_train_trimmed.jsonl \
+        --loading_mode split \
+        --queue_size 131060 \
+        --chunk_length 256 \
+        --augmentation delete --prob_augmentation 0.1 \
+        --ratio_min 0.05 --ratio_max 1.0 \
+        --momentum 0.9999 --temperature 0.05 \
+        --eval_freq 2000 \
+        --alpha 0.925 \
+        --scheduler linear \
+        --warmup_steps 4000 \
+        --save_freq 4000 \
+        --total_steps 100000 --lr 0.000001 \
+        --optim adamw --per_gpu_batch_size 10 \
+        --output_dir ./2018_tpour_contriever \
+        --log_freq 100 \
+        --contrastive_mode tpour \
+        --timestamp_injection None \
+        --maxload 1000000

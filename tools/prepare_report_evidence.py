@@ -144,7 +144,7 @@ def main():
     metadata = {"captured_at": captured_at, "python": platform.python_version(), "torch": torch.__version__,
                 "platform": platform.platform(), "cuda_available": torch.cuda.is_available(),
                 "source_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
-                "upstream_commit": subprocess.check_output(["git", "-C", "upstream/TPOUR", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
+                "upstream_commit": json.loads((ROOT / "upstream/UPSTREAM.json").read_text(encoding="utf-8"))["commit"],
                 "tpour_sha256": hashlib.sha256((ROOT / "tpour.py").read_bytes()).hexdigest(),
                 "test_exit_code": 0, "seeds": [42, 43, 44], "synthetic": True}
     save_json(EV / "provenance.json", metadata)
