@@ -68,6 +68,7 @@ def build(root,output):
     doc.add_paragraph('Accuracy trên nhãn mined preference chỉ là proxy, không phải temporal QA gold. Cần xem đồng thời bảng này và SciFact để tránh dùng khả năng giữ kiến thức làm bằng chứng cho khả năng học thời gian.')
     doc.add_heading('5. Demo truy xuất và cách thuyết trình',1)
     doc.add_paragraph('Mở biểu đồ toàn bộ test trước, giải thích teacher cố định và objective, rồi trình bày query đầu tiên cố định. Hai ảnh tiếp theo là trường hợp cải thiện nhiều nhất và giảm nhiều nhất, được chọn từ kết quả để minh họa; không phải đánh giá khách quan thay cho toàn bộ test. Có thể chạy lại tools/demo_anchored_results.py từ run.json mà không train lại.')
+    doc.add_paragraph('Demo console từ kết quả đã lưu: python demo_retention.py --root results/anchored_kaggle --query-id 1. Demo inference thực: python live_retrieval_demo.py --checkpoint <encoder.pt đã tải từ Kaggle> --query-id 1 --device cuda. Lần đầu tạo index SciFact; các query tiếp theo dùng index cache đã kiểm tra hash model/dữ liệu. Chế độ inference thực khác với đọc rankings đã lưu.')
     doc.add_picture(str(root/'demo/03_ranking_demo.png'),width=Inches(6.1))
     doc.add_heading('6. Giới hạn và nguồn',1)
     doc.add_paragraph('SciFact kiểm tra general retrieval, không chứng minh temporal alignment. Nhãn held-out là mined preference, chưa có temporal QA gold độc lập. Teacher có thể giữ thiên lệch/lỗi của model gốc. Hệ số thử nghiệm chưa tối ưu; ablation chỉ một seed. Không gọi kết quả là tái lập đầy đủ hoặc tính mới đã được peer review.')
