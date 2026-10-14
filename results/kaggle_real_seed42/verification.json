@@ -1,0 +1,13 @@
+{
+  "notebook": "https://www.kaggle.com/code/vananh1911/tpour-trpo-real-data-scifact",
+  "version": 1,
+  "training_code_commit": "cf41598a470e0ee76114e7332624624de37769b7",
+  "archive_sha256": "aeb2c7405a4691cfeac0ad6257b1b06f632b49a113a240ed2a3628914814fa35",
+  "checks": [
+    "SciFact 300 query IDs match local official qrels",
+    "All metrics recomputed from saved top-100 ranking and official qrels",
+    "Each training history contains 1000 attempts",
+    "AMP skips: CE 6, TRPO 5; actual optimizer updates 994 and 995"
+  ],
+  "checkpoints": "Retained in Kaggle Output; no checkpoint included in GitHub."
+}

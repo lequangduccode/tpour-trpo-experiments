@@ -2,7 +2,7 @@
 
 Notebook: [TPOUR_real_data_Kaggle.ipynb](notebooks/TPOUR_real_data_Kaggle.ipynb). Bật GPU và Internet, rồi chạy các ô theo thứ tự. Mặc định một seed, 1.000 bước cho mỗi nhánh; đổi `SEEDS=[42,43,44]` để kiểm tra nhiều seed khi còn ngân sách GPU. Chương trình dùng một GPU, kể cả khi Kaggle cấp hai T4.
 
-Đây là bản nâng cấp code thực hành, tiếp nhận sửa lọc context rỗng của Hạnh tại commit `bfc75ca9857dd8e0a46440ce1229b22230cdefec`. Chưa tái lập đầy đủ cấu hình và kết quả bài báo. Chưa có kết quả GPU mới khi tạo tài liệu này.
+Đây là bản nâng cấp code thực hành, tiếp nhận sửa lọc context rỗng của Hạnh tại commit `bfc75ca9857dd8e0a46440ce1229b22230cdefec`. Chưa tái lập đầy đủ cấu hình và kết quả bài báo. Đã chạy xong trên GPU Kaggle: [số liệu, log và phân tích seed 42](results/kaggle_real_seed42/README.md). CE+TRPO hơn CE nhưng vẫn kém Contriever gốc trên SciFact; cần trình bày cả ba nhánh.
 
 ## Dữ liệu và phép đo
 

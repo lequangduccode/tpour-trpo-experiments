@@ -1,0 +1,41 @@
+{
+  "groups": {
+    "baseline": {
+      "runs": [
+        "baseline"
+      ],
+      "n": 1,
+      "mean_NDCG@10": 0.639351080538005,
+      "std_NDCG@10": null
+    },
+    "ce": {
+      "runs": [
+        "ce_seed42"
+      ],
+      "n": 1,
+      "mean_NDCG@10": 0.5397517485343958,
+      "std_NDCG@10": null
+    },
+    "tpour": {
+      "runs": [
+        "tpour_seed42"
+      ],
+      "n": 1,
+      "mean_NDCG@10": 0.5955958294944789,
+      "std_NDCG@10": null
+    }
+  },
+  "protocol": {
+    "model": "facebook/contriever",
+    "max_length": 256,
+    "normalize": false,
+    "score": "dot",
+    "metrics": "binary nDCG/MAP/Recall/MRR; exact stable ranking; zero hits retained"
+  },
+  "data_hashes": {
+    "corpus.jsonl": "dec31c8182f3d744c7d2c09423756fd1d17cbef75808db13ba01cc0aab4d1ac6",
+    "queries.jsonl": "8ff84a7c903f722981cd8d595c022660140c51867b27608a6d4910db86080313",
+    "qrels/test.tsv": "0864bb985e0ca2367ba217977e72004d549054b2b06666ed9d4825ac7c21284c"
+  },
+  "interpretation": "Sample SD across seeds; absent for a single run. No invented scores."
+}

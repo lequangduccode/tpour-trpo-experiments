@@ -1,0 +1,24 @@
+{
+  "source_sha256": "5c5069ab1495d58450bd2aa4134bc291e4e7a3790cdd3c5e98b61875286efd5f",
+  "source": "upstream/TPOUR/2018_sample_train_trimmed.jsonl",
+  "seed": 42,
+  "cleaning": {
+    "input": 3000,
+    "missing_context": 4,
+    "invalid_text": 0,
+    "identical_pair": 4,
+    "duplicate_triplet": 0,
+    "valid": 2992
+  },
+  "split": {
+    "components": 2855,
+    "largest_component": 14,
+    "train_rows": 2543,
+    "heldout_rows": 449,
+    "cross_split_exact_text_overlap": 0,
+    "limitation": "Exact-text grouping only; shared articles, excerpts and paraphrases may still overlap."
+  },
+  "synthetic": false,
+  "heldout_labels": "Mined preferences from author sample, NOT independently annotated temporal QA gold.",
+  "reference_hanh_commit": "bfc75ca9857dd8e0a46440ce1229b22230cdefec"
+}
