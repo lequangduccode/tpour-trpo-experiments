@@ -29,6 +29,8 @@ def build(root,output):
     doc.add_heading('1. Vấn đề và thành phần mới',1)
     doc.add_paragraph('Thử nghiệm ban đầu dùng Wikipedia thật cho thấy CE+TRPO tốt hơn chỉ CE nhưng giảm nDCG@10 so với Contriever gốc. Nhóm đề xuất giữ thêm kiến thức của model khởi tạo bằng một teacher đóng băng. Đây là biến thể cải tiến bản thực hành, không tuyên bố phát minh kỹ thuật knowledge distillation.')
     doc.add_paragraph('TRPO gốc vẫn có current encoder, momentum reference và queue. Biến thể thêm teacher cố định: teacher không nhận gradient, không cập nhật momentum. Loss KL giữ phân bố xếp hạng trên cùng candidate list; relative embedding MSE giữ cả hướng và độ lớn embedding cho dot-product inference. Teacher chỉ dùng khi train, không trộn điểm baseline vào kết quả demo.')
+    method_picture=Path(__file__).resolve().parents[1]/'reports/anchored_improvement/method.png'
+    if method_picture.exists(): doc.add_picture(str(method_picture),width=Inches(6.1))
     equation=doc.add_paragraph(); math=OxmlElement('m:oMath')
     def run(text):
         r=OxmlElement('m:r'); t=OxmlElement('m:t'); t.text=text; r.append(t); return r
