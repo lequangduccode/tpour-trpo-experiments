@@ -31,7 +31,8 @@ def retention_loss(student, teacher, temperature=.1, representation_weight=1.):
 class AnchoredTPOUR(TPOUR):
     def __init__(self,*args,anchor_weight=10.,anchor_temperature=.1,representation_weight=1.,**kwargs):
         super().__init__(*args,**kwargs)
-        if anchor_weight<0: raise ValueError('anchor_weight must be nonnegative')
+        if anchor_weight<0 or anchor_temperature<=0 or representation_weight<0:
+            raise ValueError('Invalid anchor weight, temperature or representation weight')
         self.teacher=copy.deepcopy(self.encoder).requires_grad_(False).eval()
         self.anchor_weight=anchor_weight; self.anchor_temperature=anchor_temperature
         self.representation_weight=representation_weight

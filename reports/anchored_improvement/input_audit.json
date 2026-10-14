@@ -1,0 +1,7 @@
+{
+  "train_rows": 2543,
+  "max_length": 256,
+  "equal_tokenized_preference_pairs_without_augmentation": 4,
+  "fraction": 0.0015729453401494297,
+  "interpretation": "Input audit only; training word deletion may expose different tokens. Labels lack independently verified timestamps."
+}

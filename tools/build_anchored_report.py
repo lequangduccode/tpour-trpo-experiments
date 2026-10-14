@@ -43,6 +43,7 @@ def build(root,output):
     doc.add_paragraph('Cùng dữ liệu: 2.543 mẫu train, 449 preference held-out từ mẫu Wikipedia tác giả. Tách theo văn bản nguyên dạng; chưa loại mọi trùng bài/đoạn trích. Đánh giá đủ 300 SciFact test queries và 5.183 tài liệu; không dùng test để lựa chọn gamma hoặc checkpoint.')
     doc.add_paragraph('Seed 42/43/44, mỗi nhánh 1.000 lần thử cập nhật; batch4, queue4096, lr1e-6, warmup100, max_length256, word deletion0,1, AMP và gradient checkpointing. Mỗi nhánh dùng một T4. Số cập nhật thực có thể khác khi AMP bỏ gradient không hữu hạn; bảng chi phí phải thể hiện điều này.')
     doc.add_paragraph('Đối chứng gồm Contriever gốc, TRPO gốc, anchored; ablation seed42 chỉ KL (η=0). Ba seed báo mean và sample SD; bootstrap ghép cặp theo query, 5.000 lần. CI theo query không thay thế bất định theo seed.')
+    doc.add_paragraph('Nguyên tắc đọc kết quả: bản anchored tốt hơn TRPO nhưng kém Contriever gốc chỉ cho phép kết luận hạn chế suy giảm trong cấu hình thử nghiệm. Không thể nói đã vượt baseline hoặc nâng chất lượng temporal retrieval khi chưa có temporal gold benchmark.')
     doc.add_heading('3. Kết quả thực',1)
     table=doc.add_table(rows=1,cols=4); table.style='Table Grid'
     for c,t in zip(table.rows[0].cells,['Nhánh','nDCG@10 mean','SD','Số lần train']): c.text=t
@@ -60,6 +61,11 @@ def build(root,output):
         c=read(path)
         for cell,t in zip(table.add_row().cells,[path.parent.name,str(c['optimizer_updates']),f'{c["total_seconds"]:.1f}',f'{c["peak_gpu_bytes"]/2**30:.2f}']): cell.text=t
     doc.add_paragraph('Thời gian trên chỉ đo hàm train, không gồm tải model, warmup queue và evaluate. Peak allocated không phải tổng VRAM thiết bị. 14 kiểm tra code/toán đã qua. Cần đối chiếu metrics từ rankings, qrels, hash dữ liệu, config và code commit; log thật nằm cùng kết quả.')
+    table=doc.add_table(rows=1,cols=2); table.style='Table Grid'
+    table.rows[0].cells[0].text='Run'; table.rows[0].cells[1].text='Accuracy mined preference giữ riêng'
+    for path in sorted(root.glob('*/heldout_preference.json')):
+        c=read(path); cells=table.add_row().cells; cells[0].text=path.parent.name; cells[1].text=f'{c["pairwise_preference_accuracy"]:.4f}'
+    doc.add_paragraph('Accuracy trên nhãn mined preference chỉ là proxy, không phải temporal QA gold. Cần xem đồng thời bảng này và SciFact để tránh dùng khả năng giữ kiến thức làm bằng chứng cho khả năng học thời gian.')
     doc.add_heading('5. Demo truy xuất và cách thuyết trình',1)
     doc.add_paragraph('Mở biểu đồ toàn bộ test trước, giải thích teacher cố định và objective, rồi trình bày query đầu tiên cố định. Hai ảnh tiếp theo là trường hợp cải thiện nhiều nhất và giảm nhiều nhất, được chọn từ kết quả để minh họa; không phải đánh giá khách quan thay cho toàn bộ test. Có thể chạy lại tools/demo_anchored_results.py từ run.json mà không train lại.')
     doc.add_picture(str(root/'demo/03_ranking_demo.png'),width=Inches(6.1))

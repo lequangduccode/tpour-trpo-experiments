@@ -10,11 +10,14 @@ def verify(root,data):
     corpus,queries,qrels=read_beir(data,'test')
     hashes={f:digest(data/f) for f in ['corpus.jsonl','queries.jsonl','qrels/test.tsv']}
     expected=['baseline']+[f'{method}_seed{seed}' for seed in [42,43,44] for method in ['tpour','anchored']]+['ranking_only_seed42']
-    checks=[]; configurations={}
+    checks=[]; configurations={}; rankings={}; protocol=None
     for name in expected:
         folder=root/name; m=json.loads((folder/'metrics.json').read_text(encoding='utf-8')); run=json.loads((folder/'run.json').read_text(encoding='utf-8'))
         assert not m['partial_queries'] and m['evaluated_queries']==300 and m['corpus_size']==5183
+        if protocol is None: protocol=m['protocol']
+        assert m['protocol']==protocol
         assert m['data_hashes']==hashes and set(run)==set(qrels)==set(m['query_ids'])
+        rankings[name]=run
         rows=[]
         for q,ranking in run.items():
             assert set(ranking)<=set(corpus) and len(ranking)==100
@@ -45,6 +48,16 @@ def verify(root,data):
         assert all(abs(x-y)<1e-12 for x,y in zip(comp['ci95'],recalculated['ci95']))
     a=configurations['ranking_only_seed42']; b=configurations['anchored_seed42']
     assert all(a[k]==b[k] for k in keys+['anchor_weight','anchor_temperature']) and a['representation_weight']==0
+    agreement={}
+    for name,run in rankings.items():
+        overlaps=[]
+        for q in qrels:
+            a=rankings['baseline'][q]; b=run[q]
+            ta=set(sorted(a,key=a.get,reverse=True)[:10]); tb=set(sorted(b,key=b.get,reverse=True)[:10])
+            overlaps.append(len(ta&tb)/10)
+        agreement[name]=sum(overlaps)/len(overlaps)
+    save_json(root/'rank_agreement.json',{'mean_top10_overlap_with_baseline':agreement,
+              'interpretation':'Agreement with fixed teacher rankings on test corpus; not retrieval accuracy or proof of temporal alignment.'})
     result={'checks':checks,'paired_controls':'passed','paired_bootstrap_recomputation':'passed',
             'checkpoint_note':'Hashes agree between train and evaluation records; actual large checkpoint files not independently downloaded here.',
             'limit':'Confirms exported metrics and protocol; not independent reproduction of training or temporal gold evaluation.'}
