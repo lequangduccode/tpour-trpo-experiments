@@ -1,0 +1,8 @@
+{
+  "notebook": "https://www.kaggle.com/code/vananh1911/tpour-retention-improvement-demo",
+  "version": 1,
+  "code_commit": "219a21a",
+  "evidence_archive_sha256": "5d8532fa95ed7ac7c2dc4fa3f49b5458910cae41797eb05ae3196ce254ca652d",
+  "status": "COMPLETE",
+  "figures": "Regenerated locally from downloaded rankings with gold qrels labels and shortened excerpts."
+}

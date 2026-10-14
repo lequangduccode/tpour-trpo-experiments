@@ -1,0 +1,38 @@
+{
+  "anchored": {
+    "runs": [
+      "anchored_seed42",
+      "anchored_seed43",
+      "anchored_seed44"
+    ],
+    "n": 3,
+    "mean": 0.6290730733180933,
+    "sample_sd": 0.002037065061330115
+  },
+  "baseline": {
+    "runs": [
+      "baseline"
+    ],
+    "n": 1,
+    "mean": 0.639351080538005,
+    "sample_sd": null
+  },
+  "ranking_only": {
+    "runs": [
+      "ranking_only_seed42"
+    ],
+    "n": 1,
+    "mean": 0.628697120775459,
+    "sample_sd": null
+  },
+  "tpour": {
+    "runs": [
+      "tpour_seed42",
+      "tpour_seed43",
+      "tpour_seed44"
+    ],
+    "n": 3,
+    "mean": 0.6003482540158762,
+    "sample_sd": 0.004324998525908833
+  }
+}

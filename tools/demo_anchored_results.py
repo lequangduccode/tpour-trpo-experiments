@@ -68,7 +68,7 @@ def build(root,data,output):
             top=sorted(ranked,key=ranked.get,reverse=True)[:3]
             lines=[]; entry['results'][method]=[]
             for rank,docid in enumerate(top,1):
-                doc=corpus[docid]; excerpt=doc.get('text','')[:330]
+                doc=corpus[docid]; excerpt=textwrap.shorten(doc.get('text',''),width=330,placeholder=' …')
                 item={'rank':rank,'docid':docid,'title':doc.get('title',''),'excerpt':excerpt,'score':ranked[docid],
                       'gold_relevant':docid in gold[q]}
                 entry['results'][method].append(item)

@@ -1,0 +1,48 @@
+{
+  "checks": [
+    {
+      "run": "baseline",
+      "metric_recomputation": "passed",
+      "queries": 300
+    },
+    {
+      "run": "tpour_seed42",
+      "metric_recomputation": "passed",
+      "queries": 300
+    },
+    {
+      "run": "anchored_seed42",
+      "metric_recomputation": "passed",
+      "queries": 300
+    },
+    {
+      "run": "tpour_seed43",
+      "metric_recomputation": "passed",
+      "queries": 300
+    },
+    {
+      "run": "anchored_seed43",
+      "metric_recomputation": "passed",
+      "queries": 300
+    },
+    {
+      "run": "tpour_seed44",
+      "metric_recomputation": "passed",
+      "queries": 300
+    },
+    {
+      "run": "anchored_seed44",
+      "metric_recomputation": "passed",
+      "queries": 300
+    },
+    {
+      "run": "ranking_only_seed42",
+      "metric_recomputation": "passed",
+      "queries": 300
+    }
+  ],
+  "paired_controls": "passed",
+  "paired_bootstrap_recomputation": "passed",
+  "checkpoint_note": "Hashes agree between train and evaluation records; actual large checkpoint files not independently downloaded here.",
+  "limit": "Confirms exported metrics and protocol; not independent reproduction of training or temporal gold evaluation."
+}

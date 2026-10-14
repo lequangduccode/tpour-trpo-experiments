@@ -1,0 +1,182 @@
+[
+  {
+    "selection": "fixed first query",
+    "query_id": "1",
+    "query": "0-dimensional biomaterials show inductive properties.",
+    "ndcg_delta": 0.0,
+    "results": {
+      "tpour": [
+        {
+          "rank": 1,
+          "docid": "44640124",
+          "title": "Redox-relevant aspects of the extracellular matrix and its cellular contacts via integrins.",
+          "excerpt": "SIGNIFICANCE The extracellular matrix (ECM) fulfills essential functions in multicellular organisms. It provides the mechanical scaffold and environmental cues to cells. Upon cell attachment, the ECM signals into the cells. In this process, reactive oxygen species (ROS) are physiologically used as signalizing molecules. RECENT …",
+          "score": 1.7459235191345215,
+          "gold_relevant": false
+        },
+        {
+          "rank": 2,
+          "docid": "4346436",
+          "title": "Nonlinear Elasticity in Biological Gels",
+          "excerpt": "Unlike most synthetic materials, biological materials often stiffen as they are deformed. This nonlinear elastic response, critical for the physiological function of some tissues, has been documented since at least the 19th century, but the molecular structure and the design principles responsible for it are unknown. Current …",
+          "score": 1.6964163780212402,
+          "gold_relevant": false
+        },
+        {
+          "rank": 3,
+          "docid": "38805486",
+          "title": "Biochemical studies on Mycobacterium tuberculosis UreG and comparative modeling reveal structural and functional conservation among the bacterial UreG family.",
+          "excerpt": "Nickel is a fundamental micronutrient for cellular life, but it is toxic in soluble form at nonphysiological concentrations. Such potentially contradictory features required living organisms to develop efficient systems for nickel utilization and homeostasis. This is the case for incorporation of nickel into the active site of …",
+          "score": 1.654498815536499,
+          "gold_relevant": false
+        }
+      ],
+      "anchored": [
+        {
+          "rank": 1,
+          "docid": "4346436",
+          "title": "Nonlinear Elasticity in Biological Gels",
+          "excerpt": "Unlike most synthetic materials, biological materials often stiffen as they are deformed. This nonlinear elastic response, critical for the physiological function of some tissues, has been documented since at least the 19th century, but the molecular structure and the design principles responsible for it are unknown. Current …",
+          "score": 1.1987640857696533,
+          "gold_relevant": false
+        },
+        {
+          "rank": 2,
+          "docid": "44640124",
+          "title": "Redox-relevant aspects of the extracellular matrix and its cellular contacts via integrins.",
+          "excerpt": "SIGNIFICANCE The extracellular matrix (ECM) fulfills essential functions in multicellular organisms. It provides the mechanical scaffold and environmental cues to cells. Upon cell attachment, the ECM signals into the cells. In this process, reactive oxygen species (ROS) are physiologically used as signalizing molecules. RECENT …",
+          "score": 1.1758791208267212,
+          "gold_relevant": false
+        },
+        {
+          "rank": 3,
+          "docid": "40212412",
+          "title": "Periosteal bone formation--a neglected determinant of bone strength.",
+          "excerpt": "Life forms that have low body mass can hunt for food on the undersurface of branches or along shear cliff faces quite unperturbed by gravity. For larger animals, the hunt for dinner and the struggle to avoid becoming someone else's meal require rapid movement against gravity. This need is met by the lever function of long …",
+          "score": 1.1535143852233887,
+          "gold_relevant": false
+        }
+      ]
+    }
+  },
+  {
+    "selection": "largest improvement (selected example)",
+    "query_id": "1282",
+    "query": "Therapeutic use of the drug Dapsone to treat pyoderma gangrenous is based on anecdotal evidence.",
+    "ndcg_delta": 0.5,
+    "results": {
+      "tpour": [
+        {
+          "rank": 1,
+          "docid": "27127885",
+          "title": "An activator of the cAMP/PKA/CREB pathway promotes osteogenesis from human mesenchymal stem cells.",
+          "excerpt": "Mesenchymal stem cells (MSCs) are multipotent adult stem cells capable of differentiating along the osteoblast, adipocyte, and chondrocyte lineages. Regulation of MSCs differentiation may be a useful tool for regenerative medicine and cell-based therapy. The discovery of small molecule that activates the osteogenic …",
+          "score": 1.5870451927185059,
+          "gold_relevant": false
+        },
+        {
+          "rank": 2,
+          "docid": "9257019",
+          "title": "Discovery of endogenous catecholamines in lymphocytes and evidence for catecholamine regulation of lymphocyte function via an autocrine loop.",
+          "excerpt": "Evidence has been obtained that catecholamines and their metabolites are present in single lymphocytes and extracts of T- and B-cell clones by use of capillary electrophoresis with electrochemical detection. Pharmacological inhibition of tyrosine hydroxylase reduces observed catecholamine levels, suggesting catecholamine …",
+          "score": 1.5592730045318604,
+          "gold_relevant": false
+        },
+        {
+          "rank": 3,
+          "docid": "23649163",
+          "title": "Clinical features and treatment of peristomal pyoderma gangrenosum.",
+          "excerpt": "CONTEXT Peristomal pyoderma gangrenosum (PPG), an unusual variant of pyoderma gangrenosum, has been reported almost exclusively in patients with inflammatory bowel disease (IBD) and is frequently misdiagnosed. OBJECTIVE To better characterize the clinical manifestations, diagnosis, and management of PPG. DESIGN, SETTING, AND …",
+          "score": 1.5412871837615967,
+          "gold_relevant": true
+        }
+      ],
+      "anchored": [
+        {
+          "rank": 1,
+          "docid": "23649163",
+          "title": "Clinical features and treatment of peristomal pyoderma gangrenosum.",
+          "excerpt": "CONTEXT Peristomal pyoderma gangrenosum (PPG), an unusual variant of pyoderma gangrenosum, has been reported almost exclusively in patients with inflammatory bowel disease (IBD) and is frequently misdiagnosed. OBJECTIVE To better characterize the clinical manifestations, diagnosis, and management of PPG. DESIGN, SETTING, AND …",
+          "score": 1.1900572776794434,
+          "gold_relevant": true
+        },
+        {
+          "rank": 2,
+          "docid": "12871281",
+          "title": "Localized diacylglycerol drives the polarization of the microtubule-organizing center in T cells",
+          "excerpt": "The reorientation of the T cell microtubule-organizing center (MTOC) toward the antigen-presenting cell enables the directional secretion of cytokines and lytic factors. By single-cell photoactivation of the T cell antigen receptor, we show that MTOC polarization is driven by localized accumulation of diacylglycerol (DAG). …",
+          "score": 1.1713505983352661,
+          "gold_relevant": false
+        },
+        {
+          "rank": 3,
+          "docid": "27127885",
+          "title": "An activator of the cAMP/PKA/CREB pathway promotes osteogenesis from human mesenchymal stem cells.",
+          "excerpt": "Mesenchymal stem cells (MSCs) are multipotent adult stem cells capable of differentiating along the osteoblast, adipocyte, and chondrocyte lineages. Regulation of MSCs differentiation may be a useful tool for regenerative medicine and cell-based therapy. The discovery of small molecule that activates the osteogenic …",
+          "score": 1.1600706577301025,
+          "gold_relevant": false
+        }
+      ]
+    }
+  },
+  {
+    "selection": "largest decrease / smallest change (selected example)",
+    "query_id": "314",
+    "query": "Deamination of cytidine to uridine on the minus strand of viral DNA results in catastrophic G-to-A mutations in the viral genome.",
+    "ndcg_delta": -0.38685280723454163,
+    "results": {
+      "tpour": [
+        {
+          "rank": 1,
+          "docid": "2638387",
+          "title": "The cytidine deaminase CEM15 induces hypermutation in newly synthesized HIV-1 DNA",
+          "excerpt": "High mutation frequency during reverse transcription has a principal role in the genetic variation of primate lentiviral populations. It is the main driving force for the generation of drug resistance and the escape from immune surveillance. G to A hypermutation is one of the characteristics of primate lentiviruses, as well as …",
+          "score": 2.1131393909454346,
+          "gold_relevant": false
+        },
+        {
+          "rank": 2,
+          "docid": "544971",
+          "title": "DNA Deamination Mediates Innate Immunity to Retroviral Infection",
+          "excerpt": "CEM15/APOBEC3G is a cellular protein required for resistance to infection by virion infectivity factor (Vif)-deficient human immunodeficiency virus (HIV). Here, using a murine leukemia virus (MLV)-based system, we provide evidence that CEM15/APOBEC3G is a DNA deaminase that is incorporated into virions during viral production …",
+          "score": 1.9986298084259033,
+          "gold_relevant": false
+        },
+        {
+          "rank": 3,
+          "docid": "1970884",
+          "title": "Rational design of a flavivirus vaccine by abolishing viral RNA 2'-O methylation.",
+          "excerpt": "Viruses that replicate in the cytoplasm cannot access the host nuclear capping machinery. These viruses have evolved viral methyltransferase(s) to methylate N-7 and 2'-O cap of their RNA; alternatively, they \"snatch\" host mRNA cap to form the 5' end of viral RNA. The function of 2'-O methylation of viral RNA cap is to mimic …",
+          "score": 1.9191312789916992,
+          "gold_relevant": false
+        }
+      ],
+      "anchored": [
+        {
+          "rank": 1,
+          "docid": "2638387",
+          "title": "The cytidine deaminase CEM15 induces hypermutation in newly synthesized HIV-1 DNA",
+          "excerpt": "High mutation frequency during reverse transcription has a principal role in the genetic variation of primate lentiviral populations. It is the main driving force for the generation of drug resistance and the escape from immune surveillance. G to A hypermutation is one of the characteristics of primate lentiviruses, as well as …",
+          "score": 1.5953304767608643,
+          "gold_relevant": false
+        },
+        {
+          "rank": 2,
+          "docid": "544971",
+          "title": "DNA Deamination Mediates Innate Immunity to Retroviral Infection",
+          "excerpt": "CEM15/APOBEC3G is a cellular protein required for resistance to infection by virion infectivity factor (Vif)-deficient human immunodeficiency virus (HIV). Here, using a murine leukemia virus (MLV)-based system, we provide evidence that CEM15/APOBEC3G is a DNA deaminase that is incorporated into virions during viral production …",
+          "score": 1.5213634967803955,
+          "gold_relevant": false
+        },
+        {
+          "rank": 3,
+          "docid": "1970884",
+          "title": "Rational design of a flavivirus vaccine by abolishing viral RNA 2'-O methylation.",
+          "excerpt": "Viruses that replicate in the cytoplasm cannot access the host nuclear capping machinery. These viruses have evolved viral methyltransferase(s) to methylate N-7 and 2'-O cap of their RNA; alternatively, they \"snatch\" host mRNA cap to form the 5' end of viral RNA. The function of 2'-O methylation of viral RNA cap is to mimic …",
+          "score": 1.4017884731292725,
+          "gold_relevant": false
+        }
+      ]
+    }
+  }
+]

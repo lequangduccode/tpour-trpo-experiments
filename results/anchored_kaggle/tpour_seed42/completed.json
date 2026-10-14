@@ -1,0 +1,7 @@
+{
+  "steps": 1000,
+  "optimizer_updates": 995,
+  "total_seconds": 330.96893745399996,
+  "encoder_sha256": "245c94fd59ab500c18dda2b3d913641a0f508f095b627a54e113dc37caa002a0",
+  "peak_gpu_bytes": 2692240896
+}

@@ -1,0 +1,13 @@
+{
+  "mean_top10_overlap_with_baseline": {
+    "baseline": 1.0,
+    "tpour_seed42": 0.7123333333333333,
+    "anchored_seed42": 0.8883333333333333,
+    "tpour_seed43": 0.72,
+    "anchored_seed43": 0.8866666666666667,
+    "tpour_seed44": 0.7196666666666667,
+    "anchored_seed44": 0.8903333333333334,
+    "ranking_only_seed42": 0.8166666666666667
+  },
+  "interpretation": "Agreement with fixed teacher rankings on test corpus; not retrieval accuracy or proof of temporal alignment."
+}

@@ -26,7 +26,7 @@ Teacher là mô hình cố định ban đầu, khác reference momentum của TR
 
 14 kiểm tra hiện đã qua: gồm teacher đóng băng, gradient retention đi đúng hướng, retention bằng 0 khi embedding giống nhau, gamma0 cho gradient giống TRPO gốc, cùng các kiểm tra loss/queue/dữ liệu/metric/resume trước đó. Kiểm tra toy chỉ xác nhận toán và code, không chứng minh chất lượng.
 
-Code: `anchored_tpour.py`; notebook: `notebooks/TPOUR_anchored_Kaggle.ipynb`; demo ảnh PNG: `tools/demo_anchored_results.py`. Chưa có kết quả biến thể tại thời điểm lập kế hoạch này; sẽ lưu cả kết quả không cải thiện.
+Code: `anchored_tpour.py`; notebook: `notebooks/TPOUR_anchored_Kaggle.ipynb`; demo ảnh PNG: `tools/demo_anchored_results.py`. Kế hoạch ban đầu được lưu trước lúc chạy tại commit `219a21a`. [Kết quả đủ ba seed và ablation](results/anchored_kaggle/README.md) cho thấy SciFact tăng so với TRPO nhưng vẫn thấp hơn baseline và preference accuracy giảm. Phần MSE chưa có bằng chứng lợi ích riêng trong ablation một seed; không gọi đây là cải thiện toàn diện.
 
 ## Nguồn phương pháp
 

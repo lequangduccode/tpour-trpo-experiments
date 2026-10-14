@@ -1,0 +1,16 @@
+{
+  "metric": "NDCG@10",
+  "queries": 300,
+  "mean_delta": -0.035062676322768764,
+  "ci95": [
+    -0.051416510983503985,
+    -0.018311297057556117
+  ],
+  "bootstrap_iterations": 5000,
+  "positive_queries": 24,
+  "negative_queries": 68,
+  "tied_queries": 208,
+  "interpretation": "Query-level paired uncertainty for this dataset/seed; not proof of temporal alignment.",
+  "left": "/kaggle/working/anchor_results/baseline",
+  "right": "/kaggle/working/anchor_results/tpour_seed43"
+}

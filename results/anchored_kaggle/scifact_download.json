@@ -1,0 +1,22 @@
+{
+  "source": "https://public.ukp.informatik.tu-darmstadt.de/thakur/BEIR/datasets/scifact.zip",
+  "archive_sha256": "536e14446a0ba56ed1398ab1055f39fe852686ecad24a6306c80c490fa8e0165",
+  "environment": {
+    "python": "3.13.15",
+    "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.11.0+cu128",
+      "transformers": "4.57.6",
+      "numpy": "2.1.3"
+    },
+    "cuda": "12.8",
+    "gpu": "Tesla T4",
+    "git_commit": "219a21a3e44a6833f4a959c3d755d2574cb0ce89",
+    "code_sha256": "4b1e557c897529131c00a941b8c6f93b7074deaf8752a8fb9d588da98a32d782",
+    "implementation_hashes": {
+      "tpour.py": "604a117eea5004565efa8a3eea2706de224d2aa88b57d10a8a932c845f4c351c",
+      "anchored_tpour.py": "d4c4c47312a7aec5ecde427b6416db8005aef5befa4a908042f05a8357ff5f93"
+    },
+    "timestamp_utc": "2026-10-14T15:33:42Z"
+  }
+}
