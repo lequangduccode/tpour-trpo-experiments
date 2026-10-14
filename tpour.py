@@ -105,7 +105,7 @@ class TPOUR(nn.Module):
             self.pointer.fill_((start + n) % size)
             self.count.fill_(min(size, int(self.count) + n))
 
-    def forward(self, queries, preferred, rejected):
+    def forward(self, queries, preferred, rejected, return_embeddings=False):
         self.reference.eval()
         q, p, r = self.encoder(queries), self.encoder(preferred), self.encoder(rejected)
         with torch.no_grad():
@@ -117,8 +117,9 @@ class TPOUR(nn.Module):
         ce = F.cross_entropy(logits, torch.zeros(len(q), dtype=torch.long, device=q.device))
         preference = trpo_loss(q, p, r, rq, rp, rr, self.beta, self.temperature)
         total = self.ce_weight * ce + (1 - self.ce_weight) * preference
-        return total, {"loss": float(total.detach()), "ce": float(ce.detach()),
-                       "trpo": float(preference.detach())}, torch.cat([rp, rr]).detach()
+        result = (total, {"loss": float(total.detach()), "ce": float(ce.detach()),
+                       "trpo": float(preference.detach())}, torch.cat([rp, rr]).detach())
+        return result + ((q, p, r),) if return_embeddings else result
 
 
 def normalize_triplets(rows):

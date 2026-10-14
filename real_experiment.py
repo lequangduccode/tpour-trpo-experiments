@@ -46,7 +46,9 @@ def environment():
         except importlib.metadata.PackageNotFoundError: versions[name]=None
     return {'python':platform.python_version(),'platform':platform.platform(),'packages':versions,
             'cuda':torch.version.cuda,'gpu':torch.cuda.get_device_name(0) if torch.cuda.is_available() else None,
-            'git_commit':commit,'code_sha256':digest(__file__),'timestamp_utc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
+            'git_commit':commit,'code_sha256':digest(__file__),
+            'implementation_hashes':{p:digest(Path(__file__).parent/p) for p in ('tpour.py','anchored_tpour.py') if (Path(__file__).parent/p).exists()},
+            'timestamp_utc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
 
 
 def clean_rows(rows):
@@ -172,7 +174,13 @@ def train(args):
     encoder=Encoder(args.model,args.max_length,args.normalize).to(args.device)
     if args.gradient_checkpointing and args.model!='toy': encoder.backbone.gradient_checkpointing_enable()
     weight=1.0 if args.objective=='ce' else args.ce_weight
-    model=TPOUR(encoder,args.queue_size,args.momentum,args.temperature,args.beta,weight).to(args.device)
+    if args.objective=='anchored':
+        from anchored_tpour import AnchoredTPOUR
+        model=AnchoredTPOUR(encoder,args.queue_size,args.momentum,args.temperature,args.beta,weight,
+                           anchor_weight=args.anchor_weight,anchor_temperature=args.anchor_temperature,
+                           representation_weight=args.representation_weight).to(args.device)
+    else:
+        model=TPOUR(encoder,args.queue_size,args.momentum,args.temperature,args.beta,weight).to(args.device)
     optim=torch.optim.AdamW(encoder.parameters(),lr=args.lr,betas=(.9,.98),eps=1e-6)
     def factor(step):
         if step<args.warmup: return (step+1)/max(1,args.warmup)
@@ -229,7 +237,7 @@ def train(args):
         stats.update(step=step+1,lr=optim.param_groups[0]['lr'],seconds=time.perf_counter()-started,gradient_norm=float(grad))
         history.append(stats)
         if (step+1)%args.log_every==0 or step==start: print(json.dumps(stats),flush=True)
-        if (step+1)%args.save_every==0 or step+1==args.steps: checkpoint(step+1)
+        if (step+1)%args.save_every==0 and step+1<args.steps: checkpoint(step+1)
     # Always retain a resumable final checkpoint, including skipped AMP steps.
     checkpoint(args.steps)
     save_json(output/'completed.json',{'steps':args.steps,'optimizer_updates':sum(not r.get('skipped_nonfinite_gradient') for r in history),
@@ -353,6 +361,7 @@ def main():
     for name,default in [('data','data/real_experiment/train.jsonl'),('output','outputs/real/tpour_seed42'),('model','facebook/contriever'),('objective','tpour'),('device','cuda' if torch.cuda.is_available() else 'cpu')]: a.add_argument('--'+name,default=default)
     for name,default in [('steps',1000),('batch-size',4),('queue-size',4096),('max-length',256),('seed',42),('warmup',100),('save-every',200),('log-every',25)]: a.add_argument('--'+name,type=int,default=default)
     for name,default in [('lr',1e-6),('momentum',.9999),('temperature',.05),('beta',.3),('ce-weight',.925),('delete-prob',.1)]: a.add_argument('--'+name,type=float,default=default)
+    for name,default in [('anchor-weight',10.),('anchor-temperature',.1),('representation-weight',1.)]: a.add_argument('--'+name,type=float,default=default)
     a.add_argument('--normalize',action='store_true'); a.add_argument('--amp',action='store_true'); a.add_argument('--gradient-checkpointing',action='store_true'); a.add_argument('--resume')
     for command in ('evaluate','preference'):
         a=sub.add_parser(command); a.add_argument('--data',required=True); a.add_argument('--output',required=True)
@@ -360,7 +369,7 @@ def main():
         if command=='evaluate': a.add_argument('--split',default='test'); a.add_argument('--expected-queries',type=int,default=300)
     a=sub.add_parser('compare'); a.add_argument('--left',required=True); a.add_argument('--right',required=True); a.add_argument('--output',required=True); a.add_argument('--metric',default='NDCG@10')
     args=p.parse_args(); torch.set_num_threads(2)
-    if args.command=='train' and args.objective not in ('ce','tpour'): p.error('objective must be ce or tpour')
+    if args.command=='train' and args.objective not in ('ce','tpour','anchored'): p.error('objective must be ce, tpour or anchored')
     if hasattr(args,'batch_size') and args.batch_size<1: p.error('batch-size must be positive')
     if args.command=='prepare' and not 0<args.test_fraction<.5: p.error('test-fraction must be in (0,.5)')
     globals()[args.command](args)
