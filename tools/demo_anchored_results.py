@@ -1,5 +1,6 @@
 """Static, reproducible result demo from real rankings, with positive AND negative examples."""
 import argparse
+import csv
 import json
 import statistics
 import textwrap
@@ -49,11 +50,15 @@ def build(root,data,output):
     fig.tight_layout(); fig.savefig(output/'02_training.png',dpi=180); plt.close(fig)
     corpus={str(r['_id']):r for r in (json.loads(l) for l in (Path(data)/'corpus.jsonl').read_text(encoding='utf-8').splitlines())}
     queries={str(r['_id']):r['text'] for r in (json.loads(l) for l in (Path(data)/'queries.jsonl').read_text(encoding='utf-8').splitlines())}
+    gold={}
+    with open(Path(data)/'qrels/test.tsv',encoding='utf-8') as f:
+        for row in csv.DictReader(f,delimiter='\t'):
+            if float(row['score'])>0: gold.setdefault(row['query-id'],set()).add(row['corpus-id'])
     a={r['query_id']:r for r in (json.loads(l) for l in (root/'tpour_seed42/per_query.jsonl').read_text().splitlines())}
     b={r['query_id']:r for r in (json.loads(l) for l in (root/'anchored_seed42/per_query.jsonl').read_text().splitlines())}
     ids=sorted(a); deltas={q:b[q]['NDCG@10']-a[q]['NDCG@10'] for q in ids}
     chosen=[('fixed first query',ids[0]),('largest improvement (selected example)',max(ids,key=deltas.get)),
-            ('largest decrease (selected example)',min(ids,key=deltas.get))]
+            ('largest decrease / smallest change (selected example)',min(ids,key=deltas.get))]
     demos=[]
     for index,(reason,q) in enumerate(chosen,3):
         fig,axs=plt.subplots(1,2,figsize=(13,6)); fig.suptitle(textwrap.fill(f'{reason} | query {q}: {queries[q]}',110),fontsize=11)
@@ -64,9 +69,11 @@ def build(root,data,output):
             lines=[]; entry['results'][method]=[]
             for rank,docid in enumerate(top,1):
                 doc=corpus[docid]; excerpt=doc.get('text','')[:330]
-                item={'rank':rank,'docid':docid,'title':doc.get('title',''),'excerpt':excerpt,'score':ranked[docid]}
+                item={'rank':rank,'docid':docid,'title':doc.get('title',''),'excerpt':excerpt,'score':ranked[docid],
+                      'gold_relevant':docid in gold[q]}
                 entry['results'][method].append(item)
-                lines.append(textwrap.fill(f'{rank}. {item["title"]} [ID {docid}]',63)+'\n'+textwrap.fill(excerpt,70))
+                label='GOLD RELEVANT' if item['gold_relevant'] else 'not in positive qrels'
+                lines.append(textwrap.fill(f'{rank}. {item["title"]} [ID {docid}; {label}]',63)+'\n'+textwrap.fill(excerpt,70))
             metric=a[q]['NDCG@10'] if method=='tpour' else b[q]['NDCG@10']
             ax.set_title(f'{method} | nDCG@10={metric:.4f}')
             ax.text(0,1,'\n\n'.join(lines),va='top',fontsize=9,transform=ax.transAxes); ax.axis('off')
