@@ -44,5 +44,6 @@
   "paired_controls": "passed",
   "paired_bootstrap_recomputation": "passed",
   "checkpoint_note": "Hashes agree between train and evaluation records; actual large checkpoint files not independently downloaded here.",
-  "limit": "Confirms exported metrics and protocol; not independent reproduction of training or temporal gold evaluation."
+  "limit": "Confirms exported metrics and protocol; not independent reproduction of training or temporal gold evaluation.",
+  "live_inference_evidence": "Four live runs match saved top3 and corpus/checkpoint hashes; checkpoint hashes were computed in the separate GPU inference job."
 }

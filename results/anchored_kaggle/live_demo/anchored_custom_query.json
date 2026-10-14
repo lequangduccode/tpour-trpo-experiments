@@ -1,0 +1,53 @@
+{
+  "query": "What influences the mechanical properties of biological materials?",
+  "mode": "live encoder inference; not saved benchmark rankings",
+  "provenance": {
+    "corpus_sha256": "dec31c8182f3d744c7d2c09423756fd1d17cbef75808db13ba01cc0aab4d1ac6",
+    "checkpoint_sha256": "fe6a6966cd8bad24ac055232ef22361909e1b813dc289a0e007fe2571f0de8ba",
+    "model": "facebook/contriever",
+    "max_length": 256,
+    "normalize": false,
+    "pretrained_revision": "2bd46a25019aeea091fd42d1f0fd4801675cf699"
+  },
+  "environment": {
+    "python": "3.13.15",
+    "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.11.0+cu128",
+      "transformers": "4.57.6",
+      "numpy": "2.1.3"
+    },
+    "cuda": "12.8",
+    "gpu": "Tesla T4",
+    "git_commit": "0d2e084e291b86add5f20720591f63d066769c24",
+    "code_sha256": "4b1e557c897529131c00a941b8c6f93b7074deaf8752a8fb9d588da98a32d782",
+    "implementation_hashes": {
+      "tpour.py": "604a117eea5004565efa8a3eea2706de224d2aa88b57d10a8a932c845f4c351c",
+      "anchored_tpour.py": "76baeb5aad82bff6f004a6b465069342e77a400791f6b82971e8c91ada708e6e"
+    },
+    "timestamp_utc": "2026-10-14T23:55:20Z"
+  },
+  "results": [
+    {
+      "rank": 1,
+      "docid": "40212412",
+      "title": "Periosteal bone formation--a neglected determinant of bone strength.",
+      "excerpt": "Life forms that have low body mass can hunt for food on the undersurface of branches or along shear cliff faces quite unperturbed by gravity. For larger animals, the hunt for dinner and the struggle to avoid becoming someone else's meal require rapid movement against gravity. This need is met by the lever function of long bones, three-dimensional masterpieces of biomechanical engineering that, by ",
+      "score": 1.2606501579284668
+    },
+    {
+      "rank": 2,
+      "docid": "6190603",
+      "title": "Dynamics in the plasma membrane: how to combine fluidity and order.",
+      "excerpt": "Cell membranes are fascinating supramolecular aggregates that not only form a barrier between compartments but also harbor many chemical reactions essential to the existence and functioning of a cell. Here, it is proposed to review the molecular dynamics and mosaic organization of the plasma membrane, which are thought to have important functional implications. We will first summarize the basic co",
+      "score": 1.2047146558761597
+    },
+    {
+      "rank": 3,
+      "docid": "927561",
+      "title": "Emergent structures and dynamics of cell colonies by contact inhibition of locomotion",
+      "excerpt": "Cells in tissues can organize into a broad spectrum of structures according to their function. Drastic changes of organization, such as epithelial-mesenchymal transitions or the formation of spheroidal aggregates, are often associated either to tissue morphogenesis or to cancer progression. Here, we study the organization of cell colonies by means of simulations of self-propelled particles with ge",
+      "score": 1.2040505409240723
+    }
+  ]
+}

@@ -51,9 +51,13 @@ python verify_anchor_results.py --root results/anchored_kaggle
 
 Demo **inference thực** từ checkpoint: [notebook riêng](https://www.kaggle.com/code/vananh1911/tpour-live-checkpoint-verification), [mã chạy query mới](../../live_retrieval_demo.py). Lần đầu tạo index, các query sau dùng cache có kiểm tra hash model/corpus. Query mới không có qrels nên không báo accuracy.
 
+Job inference đã **COMPLETE**: bốn model đều khớp top-3 query1 với rankings đã đánh giá; sai số score tối đa 4,77e-7. Hash các checkpoint thật khớp metrics của lần train. [JSON xác nhận](live_demo/verification.json), [query mới chạy thực](live_demo/anchored_custom_query.json), [log inference](live_demo/kaggle_run.log). Query mới là "What influences the mechanical properties of biological materials?"; kết quả là dự đoán, không có nhãn gold để kết luận đúng/sai.
+
 [Phụ lục Word](../../reports/anchored_improvement/Bao_cao_cai_tien_TPOUR_retention.docx), [8 slide bổ sung](../../reports/anchored_improvement/Slide_cai_tien_TPOUR_retention.pptx). Không sửa đè báo cáo/slide cũ. Tất cả biểu đồ/ảnh demo được tạo bằng code, không dùng ảnh AI hoặc web demo giả.
 
 `verification.json` ghi việc tính lại mọi metric từ top-100 rankings và qrels, so config/hash và tính lại paired bootstrap. Checkpoint lớn giữ ở Kaggle Output, không đưa lên GitHub. Kết quả train là bản gọn nhóm triển khai, không phải chạy nguyên mã distributed của tác giả.
+
+![Demo query mới, render từ JSON inference thực](demo/06_live_inference.png)
 
 ![Kết quả toàn bộ test](demo/01_full_test.png)
 

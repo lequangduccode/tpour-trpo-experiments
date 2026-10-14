@@ -61,6 +61,16 @@ def verify(root,data):
     result={'checks':checks,'paired_controls':'passed','paired_bootstrap_recomputation':'passed',
             'checkpoint_note':'Hashes agree between train and evaluation records; actual large checkpoint files not independently downloaded here.',
             'limit':'Confirms exported metrics and protocol; not independent reproduction of training or temporal gold evaluation.'}
+    if (root/'live_demo/verification.json').exists():
+        for name in ['baseline','tpour_seed42','ranking_only_seed42','anchored_seed42']:
+            live=json.loads((root/f'live_demo/{name}_query1.json').read_text(encoding='utf-8'))
+            m=json.loads((root/name/'metrics.json').read_text(encoding='utf-8'))
+            assert live['provenance']['corpus_sha256']==hashes['corpus.jsonl']
+            assert live['provenance']['checkpoint_sha256']==m['checkpoint_sha256']
+            ranked=rankings[name]['1']; expected_ids=sorted(ranked,key=ranked.get,reverse=True)[:3]
+            assert [r['docid'] for r in live['results']]==expected_ids
+            assert max(abs(r['score']-ranked[r['docid']]) for r in live['results'])<1e-4
+        result['live_inference_evidence']='Four live runs match saved top3 and corpus/checkpoint hashes; checkpoint hashes were computed in the separate GPU inference job.'
     save_json(root/'verification.json',result); print(json.dumps(result,indent=2))
 
 

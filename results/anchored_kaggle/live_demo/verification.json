@@ -1,0 +1,26 @@
+[
+  {
+    "model": "baseline",
+    "top3_matches_saved_run": true,
+    "max_score_error": 1.7881393432617188e-07,
+    "checkpoint_sha256_matches_evaluation": null
+  },
+  {
+    "model": "tpour_seed42",
+    "top3_matches_saved_run": true,
+    "max_score_error": 2.384185791015625e-07,
+    "checkpoint_sha256_matches_evaluation": true
+  },
+  {
+    "model": "ranking_only_seed42",
+    "top3_matches_saved_run": true,
+    "max_score_error": 4.76837158203125e-07,
+    "checkpoint_sha256_matches_evaluation": true
+  },
+  {
+    "model": "anchored_seed42",
+    "top3_matches_saved_run": true,
+    "max_score_error": 3.5762786865234375e-07,
+    "checkpoint_sha256_matches_evaluation": true
+  }
+]

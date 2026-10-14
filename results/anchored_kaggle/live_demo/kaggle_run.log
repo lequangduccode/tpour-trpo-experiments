@@ -1,0 +1,304 @@
+[{"stream_name":"stderr","time":9.242775632,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.242825188,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.242832122,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.242836434,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.984501842,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.984552104,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.984557535,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.98456183,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":11.338868255,"data":"Cloning into '/kaggle/working/tpour-trpo-experiments'...\n"}
+,{"stream_name":"stderr","time":11.54167636,"data":"Cloning into '/kaggle/working/tpour-trpo-experiments'...\n"}
+,{"stream_name":"stderr","time":11.54171998,"data":"\n"}
+,{"stream_name":"stderr","time":11.541723652,"data":"Cloning into '/kaggle/working/tpour-trpo-experiments'...\n"}
+,{"stream_name":"stderr","time":14.322626396,"data":"Note: switching to '0d2e084'.\n"}
+,{"stream_name":"stderr","time":14.322652921,"data":"\n"}
+,{"stream_name":"stderr","time":14.322658065,"data":"You are in 'detached HEAD' state. You can look around, make experimental\n"}
+,{"stream_name":"stderr","time":14.322662254,"data":"changes and commit them, and you can discard any commits you make in this\n"}
+,{"stream_name":"stderr","time":14.32266649,"data":"state without impacting any branches by switching back to a branch.\n"}
+,{"stream_name":"stderr","time":14.322670662,"data":"\n"}
+,{"stream_name":"stderr","time":14.322674538,"data":"If you want to create a new branch to retain commits you create, you may\n"}
+,{"stream_name":"stderr","time":14.322678985,"data":"do so (now or later) by using -c with the switch command. Example:\n"}
+,{"stream_name":"stderr","time":14.322682846,"data":"\n"}
+,{"stream_name":"stderr","time":14.322686525,"data":"  git switch -c \u003cnew-branch-name\u003e\n"}
+,{"stream_name":"stderr","time":14.322690759,"data":"\n"}
+,{"stream_name":"stderr","time":14.322694665,"data":"Or undo this operation with:\n"}
+,{"stream_name":"stderr","time":14.322698989,"data":"\n"}
+,{"stream_name":"stderr","time":14.322703375,"data":"  git switch -\n"}
+,{"stream_name":"stderr","time":14.322707236,"data":"\n"}
+,{"stream_name":"stderr","time":14.322711225,"data":"Turn off this advice by setting config variable advice.detachedHead to false\n"}
+,{"stream_name":"stderr","time":14.322715282,"data":"\n"}
+,{"stream_name":"stderr","time":14.322937294,"data":"HEAD is now at 0d2e084 Prepare GPU live-demo notebook using trained experiment outputs\n"}
+,{"stream_name":"stderr","time":14.525442871,"data":"Note: switching to '0d2e084'.\n"}
+,{"stream_name":"stderr","time":14.525478814,"data":"\n"}
+,{"stream_name":"stderr","time":14.525497364,"data":"You are in 'detached HEAD' state. You can look around, make experimental\n"}
+,{"stream_name":"stderr","time":14.525502669,"data":"changes and commit them, and you can discard any commits you make in this\n"}
+,{"stream_name":"stderr","time":14.525507615,"data":"state without impacting any branches by switching back to a branch.\n"}
+,{"stream_name":"stderr","time":14.525525218,"data":"\n"}
+,{"stream_name":"stderr","time":14.525529373,"data":"If you want to create a new branch to retain commits you create, you may\n"}
+,{"stream_name":"stderr","time":14.525533455,"data":"do so (now or later) by using -c with the switch command. Example:\n"}
+,{"stream_name":"stderr","time":14.525537306,"data":"\n"}
+,{"stream_name":"stderr","time":14.525541033,"data":"  git switch -c \u003cnew-branch-name\u003e\n"}
+,{"stream_name":"stderr","time":14.525545384,"data":"\n"}
+,{"stream_name":"stderr","time":14.525556219,"data":"Or undo this operation with:\n"}
+,{"stream_name":"stderr","time":14.525559662,"data":"\n"}
+,{"stream_name":"stderr","time":14.525563261,"data":"  git switch -\n"}
+,{"stream_name":"stderr","time":14.525566741,"data":"\n"}
+,{"stream_name":"stderr","time":14.52556926,"data":"Turn off this advice by setting config variable advice.detachedHead to false\n"}
+,{"stream_name":"stderr","time":14.525571988,"data":"\n"}
+,{"stream_name":"stderr","time":14.525574424,"data":"HEAD is now at 0d2e084 Prepare GPU live-demo notebook using trained experiment outputs\n"}
+,{"stream_name":"stderr","time":14.525577063,"data":"\n"}
+,{"stream_name":"stderr","time":14.525579544,"data":"Note: switching to '0d2e084'.\n"}
+,{"stream_name":"stderr","time":14.525582069,"data":"\n"}
+,{"stream_name":"stderr","time":14.525584482,"data":"You are in 'detached HEAD' state. You can look around, make experimental\n"}
+,{"stream_name":"stderr","time":14.525588013,"data":"changes and commit them, and you can discard any commits you make in this\n"}
+,{"stream_name":"stderr","time":14.525605692,"data":"state without impacting any branches by switching back to a branch.\n"}
+,{"stream_name":"stderr","time":14.525610257,"data":"\n"}
+,{"stream_name":"stderr","time":14.525614754,"data":"If you want to create a new branch to retain commits you create, you may\n"}
+,{"stream_name":"stderr","time":14.525619502,"data":"do so (now or later) by using -c with the switch command. Example:\n"}
+,{"stream_name":"stderr","time":14.525624034,"data":"\n"}
+,{"stream_name":"stderr","time":14.525627629,"data":"  git switch -c \u003cnew-branch-name\u003e\n"}
+,{"stream_name":"stderr","time":14.525631548,"data":"\n"}
+,{"stream_name":"stderr","time":14.525635138,"data":"Or undo this operation with:\n"}
+,{"stream_name":"stderr","time":14.525638843,"data":"\n"}
+,{"stream_name":"stderr","time":14.525642407,"data":"  git switch -\n"}
+,{"stream_name":"stderr","time":14.525646115,"data":"\n"}
+,{"stream_name":"stderr","time":14.525649733,"data":"Turn off this advice by setting config variable advice.detachedHead to false\n"}
+,{"stream_name":"stderr","time":14.525653715,"data":"\n"}
+,{"stream_name":"stderr","time":14.525657272,"data":"HEAD is now at 0d2e084 Prepare GPU live-demo notebook using trained experiment outputs\n"}
+,{"stream_name":"stdout","time":17.215290315,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.0/44.0 kB 993.8 kB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":17.417739042,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.0/44.0 kB 993.8 kB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":18.842635096,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 85.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":18.890391434,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.4/566.4 kB 22.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":18.95607799,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 76.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":19.044861938,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 85.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":19.044893658,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.4/566.4 kB 22.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":19.044899972,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 76.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":36.625988825,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":36.626015373,"data":"gradio 6.26.0 requires huggingface-hub\u003c2.0,\u003e=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":36.626020581,"data":"diffusers 0.40.0 requires huggingface-hub\u003c2.0,\u003e=1.23.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":36.829160619,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":36.829197145,"data":"gradio 6.26.0 requires huggingface-hub\u003c2.0,\u003e=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":36.829204269,"data":"diffusers 0.40.0 requires huggingface-hub\u003c2.0,\u003e=1.23.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":36.829209459,"data":"\n"}
+,{"stream_name":"stderr","time":36.829213632,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":36.829218795,"data":"gradio 6.26.0 requires huggingface-hub\u003c2.0,\u003e=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":36.829223529,"data":"diffusers 0.40.0 requires huggingface-hub\u003c2.0,\u003e=1.23.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
+,{"stream_name":"stdout","time":46.763108923,"data":"Downloaded data/scifact\n"}
+,{"stream_name":"stdout","time":46.966963462,"data":"Downloaded data/scifact\n"}
+,{"stream_name":"stdout","time":53.048682202,"data":"Input checkpoint folders: ['ranking_only_seed42', 'anchored_seed43', 'tpour_seed43', 'tpour_seed44', 'anchored_seed44', 'tpour_seed42', 'anchored_seed42']\n"}
+,{"stream_name":"stdout","time":96.575507492,"data":"indexing actual corpus: 0/5183\n"}
+,{"stream_name":"stdout","time":96.780262417,"data":"indexing actual corpus: 0/5183\n"}
+,{"stream_name":"stdout","time":100.410614208,"data":"indexing actual corpus: 320/5183\n"}
+,{"stream_name":"stdout","time":100.613903692,"data":"indexing actual corpus: 320/5183\n"}
+,{"stream_name":"stdout","time":104.249418667,"data":"indexing actual corpus: 640/5183\n"}
+,{"stream_name":"stdout","time":104.451827262,"data":"indexing actual corpus: 640/5183\n"}
+,{"stream_name":"stdout","time":108.108841409,"data":"indexing actual corpus: 960/5183\n"}
+,{"stream_name":"stdout","time":108.312794962,"data":"indexing actual corpus: 960/5183\n"}
+,{"stream_name":"stdout","time":111.984120937,"data":"indexing actual corpus: 1280/5183\n"}
+,{"stream_name":"stdout","time":112.186621123,"data":"indexing actual corpus: 1280/5183\n"}
+,{"stream_name":"stdout","time":115.865088613,"data":"indexing actual corpus: 1600/5183\n"}
+,{"stream_name":"stdout","time":116.069035342,"data":"indexing actual corpus: 1600/5183\n"}
+,{"stream_name":"stdout","time":119.775126199,"data":"indexing actual corpus: 1920/5183\n"}
+,{"stream_name":"stdout","time":119.978865962,"data":"indexing actual corpus: 1920/5183\n"}
+,{"stream_name":"stdout","time":123.717451208,"data":"indexing actual corpus: 2240/5183\n"}
+,{"stream_name":"stdout","time":123.922967759,"data":"indexing actual corpus: 2240/5183\n"}
+,{"stream_name":"stdout","time":127.686399244,"data":"indexing actual corpus: 2560/5183\n"}
+,{"stream_name":"stdout","time":127.893762212,"data":"indexing actual corpus: 2560/5183\n"}
+,{"stream_name":"stdout","time":131.692225504,"data":"indexing actual corpus: 2880/5183\n"}
+,{"stream_name":"stdout","time":131.896439264,"data":"indexing actual corpus: 2880/5183\n"}
+,{"stream_name":"stdout","time":135.712283067,"data":"indexing actual corpus: 3200/5183\n"}
+,{"stream_name":"stdout","time":135.917296685,"data":"indexing actual corpus: 3200/5183\n"}
+,{"stream_name":"stdout","time":139.738618082,"data":"indexing actual corpus: 3520/5183\n"}
+,{"stream_name":"stdout","time":139.941224575,"data":"indexing actual corpus: 3520/5183\n"}
+,{"stream_name":"stdout","time":143.788460504,"data":"indexing actual corpus: 3840/5183\n"}
+,{"stream_name":"stdout","time":143.991038325,"data":"indexing actual corpus: 3840/5183\n"}
+,{"stream_name":"stdout","time":147.864363421,"data":"indexing actual corpus: 4160/5183\n"}
+,{"stream_name":"stdout","time":148.067034955,"data":"indexing actual corpus: 4160/5183\n"}
+,{"stream_name":"stdout","time":151.954345597,"data":"indexing actual corpus: 4480/5183\n"}
+,{"stream_name":"stdout","time":152.156890715,"data":"indexing actual corpus: 4480/5183\n"}
+,{"stream_name":"stdout","time":156.066276116,"data":"indexing actual corpus: 4800/5183\n"}
+,{"stream_name":"stdout","time":156.268970452,"data":"indexing actual corpus: 4800/5183\n"}
+,{"stream_name":"stdout","time":160.205501997,"data":"indexing actual corpus: 5120/5183\n"}
+,{"stream_name":"stdout","time":160.409920758,"data":"indexing actual corpus: 5120/5183\n"}
+,{"stream_name":"stdout","time":160.990009381,"data":"LIVE QUERY: 0-dimensional biomaterials show inductive properties.\n"}
+,{"stream_name":"stdout","time":160.99004899,"data":"1. Periosteal bone formation--a neglected determinant of bone strength. | ID=40212412 | score=0.98062\n"}
+,{"stream_name":"stdout","time":160.990055678,"data":"Life forms that have low body mass can hunt for food on the undersurface of branches or along shear cliff faces quite unperturbed by gravity. For larger animals, the hunt for dinner and the struggle to avoid becoming som\n"}
+,{"stream_name":"stdout","time":160.990062439,"data":"2. Nonlinear Elasticity in Biological Gels | ID=4346436 | score=0.96000\n"}
+,{"stream_name":"stdout","time":160.990067475,"data":"Unlike most synthetic materials, biological materials often stiffen as they are deformed. This nonlinear elastic response, critical for the physiological function of some tissues, has been documented since at least the 1\n"}
+,{"stream_name":"stdout","time":160.990072575,"data":"3. Redox-relevant aspects of the extracellular matrix and its cellular contacts via integrins. | ID=44640124 | score=0.95720\n"}
+,{"stream_name":"stdout","time":160.990077382,"data":"SIGNIFICANCE The extracellular matrix (ECM) fulfills essential functions in multicellular organisms. It provides the mechanical scaffold and environmental cues to cells. Upon cell attachment, the ECM signals into the cel\n"}
+,{"stream_name":"stdout","time":161.192990297,"data":"LIVE QUERY: 0-dimensional biomaterials show inductive properties.\n"}
+,{"stream_name":"stdout","time":161.193056215,"data":"1. Periosteal bone formation--a neglected determinant of bone strength. | ID=40212412 | score=0.98062\n"}
+,{"stream_name":"stdout","time":161.193063588,"data":"Life forms that have low body mass can hunt for food on the undersurface of branches or along shear cliff faces quite unperturbed by gravity. For larger animals, the hunt for dinner and the struggle to avoid becoming som\n"}
+,{"stream_name":"stdout","time":161.193071358,"data":"2. Nonlinear Elasticity in Biological Gels | ID=4346436 | score=0.96000\n"}
+,{"stream_name":"stdout","time":161.193075875,"data":"Unlike most synthetic materials, biological materials often stiffen as they are deformed. This nonlinear elastic response, critical for the physiological function of some tissues, has been documented since at least the 1\n"}
+,{"stream_name":"stdout","time":161.193082052,"data":"3. Redox-relevant aspects of the extracellular matrix and its cellular contacts via integrins. | ID=44640124 | score=0.95720\n"}
+,{"stream_name":"stdout","time":161.193086992,"data":"SIGNIFICANCE The extracellular matrix (ECM) fulfills essential functions in multicellular organisms. It provides the mechanical scaffold and environmental cues to cells. Upon cell attachment, the ECM signals into the cel\n"}
+,{"stream_name":"stdout","time":182.974809106,"data":"indexing actual corpus: 0/5183\n"}
+,{"stream_name":"stdout","time":183.179019295,"data":"indexing actual corpus: 0/5183\n"}
+,{"stream_name":"stdout","time":187.083488144,"data":"indexing actual corpus: 320/5183\n"}
+,{"stream_name":"stdout","time":187.285193933,"data":"indexing actual corpus: 320/5183\n"}
+,{"stream_name":"stdout","time":191.248400687,"data":"indexing actual corpus: 640/5183\n"}
+,{"stream_name":"stdout","time":191.454435665,"data":"indexing actual corpus: 640/5183\n"}
+,{"stream_name":"stdout","time":195.474621211,"data":"indexing actual corpus: 960/5183\n"}
+,{"stream_name":"stdout","time":195.677452797,"data":"indexing actual corpus: 960/5183\n"}
+,{"stream_name":"stdout","time":199.72961839,"data":"indexing actual corpus: 1280/5183\n"}
+,{"stream_name":"stdout","time":199.932178558,"data":"indexing actual corpus: 1280/5183\n"}
+,{"stream_name":"stdout","time":204.040042824,"data":"indexing actual corpus: 1600/5183\n"}
+,{"stream_name":"stdout","time":204.242760111,"data":"indexing actual corpus: 1600/5183\n"}
+,{"stream_name":"stdout","time":208.393571574,"data":"indexing actual corpus: 1920/5183\n"}
+,{"stream_name":"stdout","time":208.596195864,"data":"indexing actual corpus: 1920/5183\n"}
+,{"stream_name":"stdout","time":212.765737152,"data":"indexing actual corpus: 2240/5183\n"}
+,{"stream_name":"stdout","time":212.968352191,"data":"indexing actual corpus: 2240/5183\n"}
+,{"stream_name":"stdout","time":217.181721224,"data":"indexing actual corpus: 2560/5183\n"}
+,{"stream_name":"stdout","time":217.384399472,"data":"indexing actual corpus: 2560/5183\n"}
+,{"stream_name":"stdout","time":221.64340832,"data":"indexing actual corpus: 2880/5183\n"}
+,{"stream_name":"stdout","time":221.849830813,"data":"indexing actual corpus: 2880/5183\n"}
+,{"stream_name":"stdout","time":226.155201035,"data":"indexing actual corpus: 3200/5183\n"}
+,{"stream_name":"stdout","time":226.357712008,"data":"indexing actual corpus: 3200/5183\n"}
+,{"stream_name":"stdout","time":230.723112358,"data":"indexing actual corpus: 3520/5183\n"}
+,{"stream_name":"stdout","time":230.925871907,"data":"indexing actual corpus: 3520/5183\n"}
+,{"stream_name":"stdout","time":235.36124388,"data":"indexing actual corpus: 3840/5183\n"}
+,{"stream_name":"stdout","time":235.563888191,"data":"indexing actual corpus: 3840/5183\n"}
+,{"stream_name":"stdout","time":240.059590656,"data":"indexing actual corpus: 4160/5183\n"}
+,{"stream_name":"stdout","time":240.262154077,"data":"indexing actual corpus: 4160/5183\n"}
+,{"stream_name":"stdout","time":244.848259638,"data":"indexing actual corpus: 4480/5183\n"}
+,{"stream_name":"stdout","time":245.051180025,"data":"indexing actual corpus: 4480/5183\n"}
+,{"stream_name":"stdout","time":249.672986904,"data":"indexing actual corpus: 4800/5183\n"}
+,{"stream_name":"stdout","time":249.875720446,"data":"indexing actual corpus: 4800/5183\n"}
+,{"stream_name":"stdout","time":254.522113876,"data":"indexing actual corpus: 5120/5183\n"}
+,{"stream_name":"stdout","time":254.727062084,"data":"indexing actual corpus: 5120/5183\n"}
+,{"stream_name":"stdout","time":255.320729472,"data":"LIVE QUERY: 0-dimensional biomaterials show inductive properties.\n"}
+,{"stream_name":"stdout","time":255.320793269,"data":"1. Redox-relevant aspects of the extracellular matrix and its cellular contacts via integrins. | ID=44640124 | score=1.74592\n"}
+,{"stream_name":"stdout","time":255.320801708,"data":"SIGNIFICANCE The extracellular matrix (ECM) fulfills essential functions in multicellular organisms. It provides the mechanical scaffold and environmental cues to cells. Upon cell attachment, the ECM signals into the cel\n"}
+,{"stream_name":"stdout","time":255.320810011,"data":"2. Nonlinear Elasticity in Biological Gels | ID=4346436 | score=1.69642\n"}
+,{"stream_name":"stdout","time":255.320815696,"data":"Unlike most synthetic materials, biological materials often stiffen as they are deformed. This nonlinear elastic response, critical for the physiological function of some tissues, has been documented since at least the 1\n"}
+,{"stream_name":"stdout","time":255.320821775,"data":"3. Biochemical studies on Mycobacterium tuberculosis UreG and comparative modeling reveal structural and functional conservation among the bacterial UreG family. | ID=38805486 | score=1.65450\n"}
+,{"stream_name":"stdout","time":255.320843931,"data":"Nickel is a fundamental micronutrient for cellular life, but it is toxic in soluble form at nonphysiological concentrations. Such potentially contradictory features required living organisms to develop efficient systems \n"}
+,{"stream_name":"stdout","time":255.523418871,"data":"LIVE QUERY: 0-dimensional biomaterials show inductive properties.\n"}
+,{"stream_name":"stdout","time":255.523459826,"data":"1. Redox-relevant aspects of the extracellular matrix and its cellular contacts via integrins. | ID=44640124 | score=1.74592\n"}
+,{"stream_name":"stdout","time":255.523464359,"data":"SIGNIFICANCE The extracellular matrix (ECM) fulfills essential functions in multicellular organisms. It provides the mechanical scaffold and environmental cues to cells. Upon cell attachment, the ECM signals into the cel\n"}
+,{"stream_name":"stdout","time":255.523467686,"data":"2. Nonlinear Elasticity in Biological Gels | ID=4346436 | score=1.69642\n"}
+,{"stream_name":"stdout","time":255.523470385,"data":"Unlike most synthetic materials, biological materials often stiffen as they are deformed. This nonlinear elastic response, critical for the physiological function of some tissues, has been documented since at least the 1\n"}
+,{"stream_name":"stdout","time":255.523473282,"data":"3. Biochemical studies on Mycobacterium tuberculosis UreG and comparative modeling reveal structural and functional conservation among the bacterial UreG family. | ID=38805486 | score=1.65450\n"}
+,{"stream_name":"stdout","time":255.523500371,"data":"Nickel is a fundamental micronutrient for cellular life, but it is toxic in soluble form at nonphysiological concentrations. Such potentially contradictory features required living organisms to develop efficient systems \n"}
+,{"stream_name":"stdout","time":277.883350816,"data":"indexing actual corpus: 0/5183\n"}
+,{"stream_name":"stdout","time":278.085983844,"data":"indexing actual corpus: 0/5183\n"}
+,{"stream_name":"stdout","time":282.247809808,"data":"indexing actual corpus: 320/5183\n"}
+,{"stream_name":"stdout","time":282.450513594,"data":"indexing actual corpus: 320/5183\n"}
+,{"stream_name":"stdout","time":286.696448888,"data":"indexing actual corpus: 640/5183\n"}
+,{"stream_name":"stdout","time":286.901638384,"data":"indexing actual corpus: 640/5183\n"}
+,{"stream_name":"stdout","time":291.227103017,"data":"indexing actual corpus: 960/5183\n"}
+,{"stream_name":"stdout","time":291.42966801,"data":"indexing actual corpus: 960/5183\n"}
+,{"stream_name":"stdout","time":295.826522998,"data":"indexing actual corpus: 1280/5183\n"}
+,{"stream_name":"stdout","time":296.029251547,"data":"indexing actual corpus: 1280/5183\n"}
+,{"stream_name":"stdout","time":300.502877542,"data":"indexing actual corpus: 1600/5183\n"}
+,{"stream_name":"stdout","time":300.705494382,"data":"indexing actual corpus: 1600/5183\n"}
+,{"stream_name":"stdout","time":305.272377841,"data":"indexing actual corpus: 1920/5183\n"}
+,{"stream_name":"stdout","time":305.472679574,"data":"indexing actual corpus: 1920/5183\n"}
+,{"stream_name":"stdout","time":310.097429728,"data":"indexing actual corpus: 2240/5183\n"}
+,{"stream_name":"stdout","time":310.299281507,"data":"indexing actual corpus: 2240/5183\n"}
+,{"stream_name":"stdout","time":314.949381302,"data":"indexing actual corpus: 2560/5183\n"}
+,{"stream_name":"stdout","time":315.149838186,"data":"indexing actual corpus: 2560/5183\n"}
+,{"stream_name":"stdout","time":319.793519306,"data":"indexing actual corpus: 2880/5183\n"}
+,{"stream_name":"stdout","time":319.99891353,"data":"indexing actual corpus: 2880/5183\n"}
+,{"stream_name":"stdout","time":324.615909518,"data":"indexing actual corpus: 3200/5183\n"}
+,{"stream_name":"stdout","time":324.818422557,"data":"indexing actual corpus: 3200/5183\n"}
+,{"stream_name":"stdout","time":329.341207929,"data":"indexing actual corpus: 3520/5183\n"}
+,{"stream_name":"stdout","time":329.543626981,"data":"indexing actual corpus: 3520/5183\n"}
+,{"stream_name":"stdout","time":334.005167533,"data":"indexing actual corpus: 3840/5183\n"}
+,{"stream_name":"stdout","time":334.207937697,"data":"indexing actual corpus: 3840/5183\n"}
+,{"stream_name":"stdout","time":338.62501214,"data":"indexing actual corpus: 4160/5183\n"}
+,{"stream_name":"stdout","time":338.827573676,"data":"indexing actual corpus: 4160/5183\n"}
+,{"stream_name":"stdout","time":343.205139359,"data":"indexing actual corpus: 4480/5183\n"}
+,{"stream_name":"stdout","time":343.407681315,"data":"indexing actual corpus: 4480/5183\n"}
+,{"stream_name":"stdout","time":347.771269777,"data":"indexing actual corpus: 4800/5183\n"}
+,{"stream_name":"stdout","time":347.974039394,"data":"indexing actual corpus: 4800/5183\n"}
+,{"stream_name":"stdout","time":352.341934705,"data":"indexing actual corpus: 5120/5183\n"}
+,{"stream_name":"stdout","time":352.547744912,"data":"indexing actual corpus: 5120/5183\n"}
+,{"stream_name":"stdout","time":353.097630987,"data":"LIVE QUERY: 0-dimensional biomaterials show inductive properties.\n"}
+,{"stream_name":"stdout","time":353.097685231,"data":"1. Redox-relevant aspects of the extracellular matrix and its cellular contacts via integrins. | ID=44640124 | score=1.65139\n"}
+,{"stream_name":"stdout","time":353.097708448,"data":"SIGNIFICANCE The extracellular matrix (ECM) fulfills essential functions in multicellular organisms. It provides the mechanical scaffold and environmental cues to cells. Upon cell attachment, the ECM signals into the cel\n"}
+,{"stream_name":"stdout","time":353.097713241,"data":"2. Nonlinear Elasticity in Biological Gels | ID=4346436 | score=1.57241\n"}
+,{"stream_name":"stdout","time":353.097717328,"data":"Unlike most synthetic materials, biological materials often stiffen as they are deformed. This nonlinear elastic response, critical for the physiological function of some tissues, has been documented since at least the 1\n"}
+,{"stream_name":"stdout","time":353.097721655,"data":"3. Large deformation of red blood cell ghosts in a simple shear flow. | ID=27049238 | score=1.50101\n"}
+,{"stream_name":"stdout","time":353.097726192,"data":"Red blood cells are known to change shape in response to local flow conditions. Deformability affects red blood cell physiological function and the hydrodynamic properties of blood. The immersed boundary method is used t\n"}
+,{"stream_name":"stdout","time":353.300367104,"data":"LIVE QUERY: 0-dimensional biomaterials show inductive properties.\n"}
+,{"stream_name":"stdout","time":353.30044444,"data":"1. Redox-relevant aspects of the extracellular matrix and its cellular contacts via integrins. | ID=44640124 | score=1.65139\n"}
+,{"stream_name":"stdout","time":353.300451328,"data":"SIGNIFICANCE The extracellular matrix (ECM) fulfills essential functions in multicellular organisms. It provides the mechanical scaffold and environmental cues to cells. Upon cell attachment, the ECM signals into the cel\n"}
+,{"stream_name":"stdout","time":353.300456938,"data":"2. Nonlinear Elasticity in Biological Gels | ID=4346436 | score=1.57241\n"}
+,{"stream_name":"stdout","time":353.300461582,"data":"Unlike most synthetic materials, biological materials often stiffen as they are deformed. This nonlinear elastic response, critical for the physiological function of some tissues, has been documented since at least the 1\n"}
+,{"stream_name":"stdout","time":353.300465792,"data":"3. Large deformation of red blood cell ghosts in a simple shear flow. | ID=27049238 | score=1.50101\n"}
+,{"stream_name":"stdout","time":353.300470335,"data":"Red blood cells are known to change shape in response to local flow conditions. Deformability affects red blood cell physiological function and the hydrodynamic properties of blood. The immersed boundary method is used t\n"}
+,{"stream_name":"stdout","time":375.787409351,"data":"indexing actual corpus: 0/5183\n"}
+,{"stream_name":"stdout","time":375.987080735,"data":"indexing actual corpus: 0/5183\n"}
+,{"stream_name":"stdout","time":380.124245082,"data":"indexing actual corpus: 320/5183\n"}
+,{"stream_name":"stdout","time":380.326840172,"data":"indexing actual corpus: 320/5183\n"}
+,{"stream_name":"stdout","time":384.557419056,"data":"indexing actual corpus: 640/5183\n"}
+,{"stream_name":"stdout","time":384.762160047,"data":"indexing actual corpus: 640/5183\n"}
+,{"stream_name":"stdout","time":389.046181861,"data":"indexing actual corpus: 960/5183\n"}
+,{"stream_name":"stdout","time":389.249139753,"data":"indexing actual corpus: 960/5183\n"}
+,{"stream_name":"stdout","time":393.613070566,"data":"indexing actual corpus: 1280/5183\n"}
+,{"stream_name":"stdout","time":393.815749808,"data":"indexing actual corpus: 1280/5183\n"}
+,{"stream_name":"stdout","time":398.260054035,"data":"indexing actual corpus: 1600/5183\n"}
+,{"stream_name":"stdout","time":398.462678549,"data":"indexing actual corpus: 1600/5183\n"}
+,{"stream_name":"stdout","time":403.000461917,"data":"indexing actual corpus: 1920/5183\n"}
+,{"stream_name":"stdout","time":403.202955691,"data":"indexing actual corpus: 1920/5183\n"}
+,{"stream_name":"stdout","time":407.833501829,"data":"indexing actual corpus: 2240/5183\n"}
+,{"stream_name":"stdout","time":408.036121757,"data":"indexing actual corpus: 2240/5183\n"}
+,{"stream_name":"stdout","time":412.688826007,"data":"indexing actual corpus: 2560/5183\n"}
+,{"stream_name":"stdout","time":412.891831115,"data":"indexing actual corpus: 2560/5183\n"}
+,{"stream_name":"stdout","time":417.535795866,"data":"indexing actual corpus: 2880/5183\n"}
+,{"stream_name":"stdout","time":417.741862126,"data":"indexing actual corpus: 2880/5183\n"}
+,{"stream_name":"stdout","time":422.376283224,"data":"indexing actual corpus: 3200/5183\n"}
+,{"stream_name":"stdout","time":422.578922146,"data":"indexing actual corpus: 3200/5183\n"}
+,{"stream_name":"stdout","time":427.14384926,"data":"indexing actual corpus: 3520/5183\n"}
+,{"stream_name":"stdout","time":427.346349479,"data":"indexing actual corpus: 3520/5183\n"}
+,{"stream_name":"stdout","time":431.836151678,"data":"indexing actual corpus: 3840/5183\n"}
+,{"stream_name":"stdout","time":432.038563302,"data":"indexing actual corpus: 3840/5183\n"}
+,{"stream_name":"stdout","time":436.475276554,"data":"indexing actual corpus: 4160/5183\n"}
+,{"stream_name":"stdout","time":436.677602134,"data":"indexing actual corpus: 4160/5183\n"}
+,{"stream_name":"stdout","time":441.080445814,"data":"indexing actual corpus: 4480/5183\n"}
+,{"stream_name":"stdout","time":441.283901572,"data":"indexing actual corpus: 4480/5183\n"}
+,{"stream_name":"stdout","time":445.666397481,"data":"indexing actual corpus: 4800/5183\n"}
+,{"stream_name":"stdout","time":445.866260761,"data":"indexing actual corpus: 4800/5183\n"}
+,{"stream_name":"stdout","time":450.215076404,"data":"indexing actual corpus: 5120/5183\n"}
+,{"stream_name":"stdout","time":450.421404089,"data":"indexing actual corpus: 5120/5183\n"}
+,{"stream_name":"stdout","time":450.96762654,"data":"LIVE QUERY: 0-dimensional biomaterials show inductive properties.\n"}
+,{"stream_name":"stdout","time":450.968016912,"data":"1. Nonlinear Elasticity in Biological Gels | ID=4346436 | score=1.19876\n"}
+,{"stream_name":"stdout","time":450.968395087,"data":"Unlike most synthetic materials, biological materials often stiffen as they are deformed. This nonlinear elastic response, critical for the physiological function of some tissues, has been documented since at least the 1\n"}
+,{"stream_name":"stdout","time":450.968412562,"data":"2. Redox-relevant aspects of the extracellular matrix and its cellular contacts via integrins. | ID=44640124 | score=1.17588\n"}
+,{"stream_name":"stdout","time":450.9684191,"data":"SIGNIFICANCE The extracellular matrix (ECM) fulfills essential functions in multicellular organisms. It provides the mechanical scaffold and environmental cues to cells. Upon cell attachment, the ECM signals into the cel\n"}
+,{"stream_name":"stdout","time":450.968425262,"data":"3. Periosteal bone formation--a neglected determinant of bone strength. | ID=40212412 | score=1.15351\n"}
+,{"stream_name":"stdout","time":450.968432414,"data":"Life forms that have low body mass can hunt for food on the undersurface of branches or along shear cliff faces quite unperturbed by gravity. For larger animals, the hunt for dinner and the struggle to avoid becoming som\n"}
+,{"stream_name":"stdout","time":451.170336828,"data":"LIVE QUERY: 0-dimensional biomaterials show inductive properties.\n"}
+,{"stream_name":"stdout","time":451.170388711,"data":"1. Nonlinear Elasticity in Biological Gels | ID=4346436 | score=1.19876\n"}
+,{"stream_name":"stdout","time":451.170394307,"data":"Unlike most synthetic materials, biological materials often stiffen as they are deformed. This nonlinear elastic response, critical for the physiological function of some tissues, has been documented since at least the 1\n"}
+,{"stream_name":"stdout","time":451.170433734,"data":"2. Redox-relevant aspects of the extracellular matrix and its cellular contacts via integrins. | ID=44640124 | score=1.17588\n"}
+,{"stream_name":"stdout","time":451.170439943,"data":"SIGNIFICANCE The extracellular matrix (ECM) fulfills essential functions in multicellular organisms. It provides the mechanical scaffold and environmental cues to cells. Upon cell attachment, the ECM signals into the cel\n"}
+,{"stream_name":"stdout","time":451.170444598,"data":"3. Periosteal bone formation--a neglected determinant of bone strength. | ID=40212412 | score=1.15351\n"}
+,{"stream_name":"stdout","time":451.170449301,"data":"Life forms that have low body mass can hunt for food on the undersurface of branches or along shear cliff faces quite unperturbed by gravity. For larger animals, the hunt for dinner and the struggle to avoid becoming som\n"}
+,{"stream_name":"stdout","time":467.942539223,"data":"LIVE QUERY: What influences the mechanical properties of biological materials?\n"}
+,{"stream_name":"stdout","time":467.942605788,"data":"1. Periosteal bone formation--a neglected determinant of bone strength. | ID=40212412 | score=1.26065\n"}
+,{"stream_name":"stdout","time":467.942612868,"data":"Life forms that have low body mass can hunt for food on the undersurface of branches or along shear cliff faces quite unperturbed by gravity. For larger animals, the hunt for dinner and the struggle to avoid becoming som\n"}
+,{"stream_name":"stdout","time":467.94261912,"data":"2. Dynamics in the plasma membrane: how to combine fluidity and order. | ID=6190603 | score=1.20471\n"}
+,{"stream_name":"stdout","time":467.942623457,"data":"Cell membranes are fascinating supramolecular aggregates that not only form a barrier between compartments but also harbor many chemical reactions essential to the existence and functioning of a cell. Here, it is propose\n"}
+,{"stream_name":"stdout","time":467.942628226,"data":"3. Emergent structures and dynamics of cell colonies by contact inhibition of locomotion | ID=927561 | score=1.20405\n"}
+,{"stream_name":"stdout","time":467.942849111,"data":"Cells in tissues can organize into a broad spectrum of structures according to their function. Drastic changes of organization, such as epithelial-mesenchymal transitions or the formation of spheroidal aggregates, are of\n"}
+,{"stream_name":"stdout","time":468.14519775,"data":"LIVE QUERY: What influences the mechanical properties of biological materials?\n"}
+,{"stream_name":"stdout","time":468.145274151,"data":"1. Periosteal bone formation--a neglected determinant of bone strength. | ID=40212412 | score=1.26065\n"}
+,{"stream_name":"stdout","time":468.14528197,"data":"Life forms that have low body mass can hunt for food on the undersurface of branches or along shear cliff faces quite unperturbed by gravity. For larger animals, the hunt for dinner and the struggle to avoid becoming som\n"}
+,{"stream_name":"stdout","time":468.145287595,"data":"2. Dynamics in the plasma membrane: how to combine fluidity and order. | ID=6190603 | score=1.20471\n"}
+,{"stream_name":"stdout","time":468.145292471,"data":"Cell membranes are fascinating supramolecular aggregates that not only form a barrier between compartments but also harbor many chemical reactions essential to the existence and functioning of a cell. Here, it is propose\n"}
+,{"stream_name":"stdout","time":468.145297678,"data":"3. Emergent structures and dynamics of cell colonies by contact inhibition of locomotion | ID=927561 | score=1.20405\n"}
+,{"stream_name":"stdout","time":468.145301954,"data":"Cells in tissues can organize into a broad spectrum of structures according to their function. Drastic changes of organization, such as epithelial-mesenchymal transitions or the formation of spheroidal aggregates, are of\n"}
+,{"stream_name":"stdout","time":470.257516436,"data":"Demo finished; export JSON evidence and retain the notebook outputs.\n"}
+,{"stream_name":"stderr","time":473.892771496,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":473.892820591,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":474.091272738,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":474.091302305,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":474.981353602,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":475.078695614,"data":"[NbConvertApp] Writing 18442 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":478.082584207,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":478.687219825,"data":"[NbConvertApp] Writing 301220 bytes to __results__.html\n"}
+]

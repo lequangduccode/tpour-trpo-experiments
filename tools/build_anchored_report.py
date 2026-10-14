@@ -1,4 +1,4 @@
-"""Write a Vietnamese Word supplement and six plain slides from verified GPU evidence."""
+"""Write a Vietnamese Word supplement and eight plain slides from verified GPU evidence."""
 import argparse
 import json
 from pathlib import Path
@@ -87,6 +87,10 @@ def build(root,output):
     doc.add_picture(str(root/'demo/04_ranking_demo.png'),width=Inches(6.1))
     doc.add_paragraph('Ví dụ chọn vì giảm nhiều nhất (query314, seed42): minh họa biến thể vẫn có trường hợp kém TRPO. Cần trình bày cùng ví dụ tốt và số liệu toàn bộ test.')
     doc.add_picture(str(root/'demo/05_ranking_demo.png'),width=Inches(6.1))
+    if (root/'live_demo/verification.json').exists():
+        checks=read(root/'live_demo/verification.json')
+        doc.add_paragraph(f'Demo inference riêng đã hoàn tất trên Kaggle: {len(checks)} nhánh đều khớp top-3 truy vấn cố định với rankings đã lưu; sai số score lớn nhất {max(r["max_score_error"] for r in checks):.2e}. Hash checkpoint thật khớp bản đánh giá. Một query mới cũng chạy bằng encoder và index thực; query mới chưa có qrels nên không báo accuracy. Notebook và log nằm trong results/anchored_kaggle/live_demo.')
+        if (root/'demo/06_live_inference.png').exists(): doc.add_picture(str(root/'demo/06_live_inference.png'),width=Inches(6.1))
     doc.add_heading('6. Giới hạn và nguồn',1)
     doc.add_paragraph('SciFact kiểm tra general retrieval, không chứng minh temporal alignment. Nhãn held-out là mined preference, chưa có temporal QA gold độc lập. Teacher có thể giữ thiên lệch/lỗi của model gốc. Hệ số thử nghiệm chưa tối ưu; ablation chỉ một seed. Không gọi kết quả là tái lập đầy đủ hoặc tính mới đã được peer review.')
     doc.add_paragraph('SciFact đã được xem trong thử nghiệm trước và dùng để nhận diện mức giảm sau fine-tune, trước khi thiết kế retention. Việc cố định kế hoạch lần chạy mới không loại bỏ được thiên lệch thiết kế do đã biết benchmark. Cần xác nhận bằng benchmark chưa dùng khi thiết kế, cùng temporal gold test độc lập, trước khi kết luận nghiên cứu rộng hơn.')
