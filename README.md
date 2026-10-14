@@ -1,5 +1,7 @@
 # Thử nghiệm TPOUR / TRPO
 
+Bản nâng cấp dùng **Wikipedia thật**, so sánh CE/CE+TRPO và đánh giá đủ SciFact: [hướng dẫn thực nghiệm](REAL_EXPERIMENT.md), [notebook Kaggle](notebooks/TPOUR_real_data_Kaggle.ipynb). Kết quả demo giả lập bên dưới chỉ kiểm tra chương trình.
+
 ## Báo cáo và slide thuyết trình
 
 Bộ tài liệu hoàn thiện ngày 12/10/2026 nằm tại [reports/](reports/README.md): [báo cáo Word chi tiết](reports/Bao_cao_chi_tiet_TPOUR_TRPO.docx), [bản DOC](reports/Bao_cao_chi_tiet_TPOUR_TRPO.doc), [PDF](reports/Bao_cao_chi_tiet_TPOUR_TRPO.pdf), [PowerPoint 19 slide](reports/Slide_thuyet_trinh_TPOUR_TRPO.pptx), [kịch bản thuyết trình](reports/Kich_ban_thuyet_trinh_TPOUR_TRPO.docx) và ảnh chụp demo. Có kết quả chạy bổ sung ba seed và log gốc; chưa đánh giá BEIR đầy đủ. Điền thông tin sinh viên/giảng viên trên bìa trước khi nộp.

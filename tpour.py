@@ -130,7 +130,7 @@ def normalize_triplets(rows):
             def text(ctx):
                 return ctx if isinstance(ctx, str) else ctx["text"]
             if not row.get("positive_ctxs") or not row.get("weak_positive_ctxs"):
-                raise ValueError(f"Row {i}: missing positive or weak-positive contexts")
+                continue
             item = {"query": row["question"], "preferred": text(row["positive_ctxs"][0]),
                     "rejected": text(row["weak_positive_ctxs"][0])}
         if any(not isinstance(x, str) or not x.strip() for x in item.values()):

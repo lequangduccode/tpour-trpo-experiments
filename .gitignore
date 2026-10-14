@@ -7,3 +7,7 @@ outputs/
 *.safetensors
 .env
 .env.*
+.DS_Store
+data/scifact/
+data/scifact*
+data/real_experiment/
