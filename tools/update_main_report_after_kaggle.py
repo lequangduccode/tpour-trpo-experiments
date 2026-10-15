@@ -154,11 +154,15 @@ def build(source,output):
       '  3.1. Nguồn dữ liệu; 3.2. Làm sạch và tách dữ liệu',
       '  3.3. Encoder/reference/teacher; 3.4. Objective và thành phần mới',
       '  3.5. Train/resume; 3.6. Đánh giá; 3.7. Mã nguồn và demo',
+      '  3.8. Lập luận thiết kế; 3.9. Thuật toán; 3.10. Đóng góp và tái lập',
       'CHƯƠNG 4. THỰC NGHIỆM, KẾT QUẢ VÀ ĐÁNH ĐỔI',
       '  4.1. Các giai đoạn; 4.2. Đối chứng; 4.3. Kết quả ba seed',
       '  4.4. Bootstrap; 4.5. Preference; 4.6. Ablation MSE',
       '  4.7. Chi phí; 4.8. Demo checkpoint thật; 4.9. Giới hạn',
       'CHƯƠNG 5. KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN',
+      '  5.1–5.3. Công việc, hướng mở và đối chiếu mục tiêu',
+      '  5.4–5.6. Ý nghĩa, rào cản và kế hoạch kiểm chứng',
+      '  5.7. Các câu hỏi trọng tâm khi bảo vệ đồ án',
       'PHỤ LỤC. LỆNH CHẠY, ĐẦU RA, ĐỐI CHIẾU VÀ TÀI LIỆU THAM KHẢO']:
         x=doc.add_paragraph(text);toc.append(x)
     marker=p[65]._p
@@ -197,6 +201,32 @@ def build(source,output):
     heading('3.7. Cấu trúc mã nguồn và phần đã bổ sung')
     table(['File','Vai trò'],[
       ['tpour.py','Encoder, CE/TRPO, EMA, queue; giữ demo toy để smoke test'],['real_experiment.py','Prepare/train/resume/full evaluate/preference/bootstrap/provenance'],['anchored_tpour.py','Teacher cố định, ranking KL và relative embedding MSE'],['test_tpour.py / test_real_experiment.py / test_anchored_tpour.py','5 + 5 + 4 = 14 kiểm tra'],['verify_anchor_results.py','Đối chiếu protocol/config/hash, tính lại metrics/CI và live evidence'],['demo_retention.py','Replay rankings của run thật, ghi rõ chế độ'],['live_retrieval_demo.py','Inference encoder thật với query nhập và cache index'],['notebooks/TPOUR_anchored_Kaggle.ipynb','Đối chứng ba seed và ablation'],['notebooks/TPOUR_live_checkpoint_demo.ipynb','Demo từ checkpoint output và truy vấn mới']])
+    heading('3.8. Lập luận thiết kế: từ vấn đề quan sát đến giả thuyết kiểm chứng')
+    para('Thiết kế retention xuất phát từ việc fine-tune trên mẫu Wikipedia nhỏ làm giảm SciFact so với Contriever khởi tạo. Đây là dấu hiệu suy giảm trên một benchmark tổng quát; chưa đủ để kết luận cơ chế duy nhất là catastrophic forgetting. Thay đổi miền dữ liệu, nhãn mined và cấu hình tối ưu đều có thể góp phần. Nhóm đặt giả thuyết hẹp: ràng buộc student gần hành vi ban đầu có thể giữ được một phần năng lực truy xuất tổng quát trong khi vẫn học CE/TRPO.')
+    table(['Quyết định','Lý do và hệ quả cần kiểm tra'],[
+      ['Teacher cố định, tách EMA reference','EMA đi theo student nên không còn là mốc hành vi ban đầu. Teacher cố định tạo mốc giữ kiến thức, nhưng cũng có thể cản học thông tin mới.'],
+      ['KL trên thứ tự tương đối của batch','Giữ phân bố ưu tiên mềm thay vì chỉ ép một tài liệu đúng. Candidate set nhỏ và phụ thuộc batch, chưa đại diện toàn corpus.'],
+      ['Cosine cho distillation, dot cho retrieval','Cosine giảm nhạy với scale khi tạo phân bố; dot giữ protocol Contriever. Hai không đồng nhất, nên cần đo retrieval thực và thử thành phần giữ biểu diễn.'],
+      ['Relative MSE bổ sung','Ràng buộc cả hướng và norm; chia norm teacher giúp so lỗi tương đối. Hiệu quả riêng phải kiểm tra bằng ablation, không suy ra từ ý nghĩa công thức.'],
+      ['Inference chỉ dùng student','Có thể dùng cùng quy trình lập chỉ mục như đối chứng; phần teacher làm tăng chi phí train, không thêm một lượt teacher khi trả lời query.']])
+    para('Từ giả thuyết này, thí nghiệm phải có ba góc nhìn: SciFact đo retrieval tổng quát; held-out preference theo dõi mục tiêu mined; ablation phân biệt tác động của KL và MSE. Nếu chỉ SciFact tăng mà preference giảm, kết quả được diễn giải là đánh đổi giữa hai mục tiêu. Thiết kế không mặc định retention sẽ tốt ở mọi mốc hoặc mọi miền dữ liệu.')
+    heading('3.9. Thuật toán một bước huấn luyện và luồng suy luận')
+    for text in [
+      'Bước 1 — Đọc batch bộ ba từ train split cố định, tạo augmentation và tokenize tối đa 256 token. Cùng văn bản đã augmentation được đưa cho student và teacher để tránh distillation hai đầu vào khác nhau.',
+      'Bước 2 — Student tạo embedding query, preferred và rejected có gradient. Reference tạo biểu diễn phục vụ preference gap và keys không gradient; teacher tạo mục tiêu distillation không gradient.',
+      'Bước 3 — Tính CE bằng positive và negative queue; tính TRPO theo chênh lệch student/reference. Với biến thể mới, ghép 2B tài liệu preferred/rejected của batch cho mỗi query để tính KL; tính relative MSE trên cả ba nhóm embedding.',
+      'Bước 4 — Cộng objective theo Công thức 9, backward bằng AMP, unscale gradient, kiểm tra hữu hạn và clip. Nếu bước không hợp lệ thì bỏ cập nhật; nếu hợp lệ mới cập nhật optimizer, scheduler, EMA reference và queue.',
+      'Bước 5 — Lưu log, cấu hình và checkpoint. Đánh giá với model cuối theo protocol cố định; không duyệt các checkpoint theo điểm test để chọn kết quả cao nhất.'
+    ]:para(text)
+    para('Ví dụ batch size B=4 tạo 8 candidate documents cho mỗi query khi distillation, tức ma trận score 4×8. Đây là các mẫu trong batch, không phải 8 tài liệu do qrels SciFact chọn. Qrels test chỉ được dùng ở bước đánh giá; không dùng làm nhãn train. Reference keys đưa vào queue và candidate list distillation có vai trò khác nhau, không nên đồng nhất hai cấu trúc.')
+    para('Luồng inference: tải encoder.pt của student → kiểm tra hash/protocol cache → mã hóa corpus hoặc dùng index tương thích → mã hóa query mới → tính dot product với toàn corpus → lấy top-k và lưu JSON. Trong demo replay, thay bước mã hóa bằng việc đọc run.json đã đánh giá; hai chế độ được ghi rõ để tránh trình bày kết quả lưu sẵn như một lần chạy mới.')
+    heading('3.10. Phân định đóng góp và khả năng tái lập')
+    table(['Lớp công việc','Đã thực hiện','Phạm vi chưa bao phủ'],[
+      ['Kế thừa công trình gốc','Contriever, ý tưởng temporal preference, CE/TRPO, reference và queue','Chưa tái lập toàn bộ dữ liệu, lịch train và temporal QA của tác giả'],
+      ['Kỹ thuật thực nghiệm của nhóm','Làm sạch/split, runner, provenance, kiểm thử, metrics và demo checkpoint','Chưa bảo đảm loại trùng ngữ nghĩa hoặc tái lập bitwise trên mọi phần cứng'],
+      ['Biến thể phương pháp của nhóm','Teacher cố định và objective KL + relative MSE, có ablation','Chưa chứng minh tính mới học thuật; MSE chưa có lợi ích riêng chắc chắn'],
+      ['Bằng chứng đánh giá','Full SciFact, ba seed, bootstrap query-level, proxy và chi phí','Chưa có benchmark độc lập chưa dùng khi thiết kế hoặc temporal gold']])
+    para('Điều kiện tối thiểu để người khác kiểm tra lại là cùng dữ liệu/hash, cùng split và tokenizer/revision, cùng cấu hình objective, số cập nhật thực và quy tắc metric. Có thể kiểm tra rankings/metrics từ GitHub mà không train lại; muốn inference query mới cần tải đúng checkpoint từ Kaggle. Muốn tái huấn luyện cần GPU phù hợp và cài môi trường, không thể chỉ mở ảnh biểu đồ rồi coi là đã tái lập.')
     heading('CHƯƠNG 4: THỰC NGHIỆM, KẾT QUẢ VÀ ĐÁNH ĐỔI',1)
     heading('4.1. Các giai đoạn thực hiện và giá trị bằng chứng')
     table(['Giai đoạn','Đã chạy','Cách diễn giải'],[
@@ -260,6 +290,44 @@ def build(source,output):
       'Các ý tưởng LoRA/time adapters, event graphs, query-only temporal transform và isotropy/whitening vẫn là hướng mở; chưa có code/benchmark để khẳng định độ trễ, khả năng chống collapse hoặc lợi ích của chúng.',
       'Tái lập đầy đủ temporal QA, nhiều mốc và nội suy time embedding của bản bài báo được chọn khi có dữ liệu/tài nguyên; đo chi phí lập chỉ mục theo đúng hệ thống triển khai.'
     ]:para(text,'List Bullet')
+    heading('5.3. Đối chiếu mục tiêu với kết quả đạt được')
+    table(['Mục tiêu','Mức đạt và căn cứ','Điều chưa thể kết luận'],[
+      ['Hiểu/cài đặt phương pháp','Có bản CE/TRPO, EMA, queue và 14 kiểm tra toàn bộ pipeline','Không đồng nghĩa đã tái lập nguyên bài báo'],
+      ['Thay dữ liệu mock','Có 2.992 bộ ba thật; train/held-out riêng và provenance','Nhãn mined chưa thành temporal gold; split chưa loại mọi trùng ngữ nghĩa'],
+      ['Thử một mở rộng có code','Có teacher cố định, hai loss giữ kiến thức, ba seed và ablation','Không phải phát minh distillation; chưa chứng minh mọi thành phần cần thiết'],
+      ['Cải thiện retrieval sau fine-tune','nDCG@10 tăng so với TRPO ở cả ba seed đã chạy','Chưa vượt model gốc, chưa chứng minh tổng quát sang benchmark khác'],
+      ['Minh họa sử dụng thật','Có inference checkpoint, query mới, cache và đối chiếu top-k','Một query demo không chứng minh accuracy hoặc temporal correctness']])
+    para('Đóng góp có giá trị nhất của đồ án là biến một minh họa thuận lợi thành thực nghiệm có đối chứng và có thể truy nguyên. Phần kỹ thuật và phần nghiên cứu cần được đánh giá riêng: pipeline hoạt động là điều kiện cần để tin số liệu; hiệu quả phương pháp phải dựa vào benchmark, độ bất định và các kết quả bất lợi. Nhóm đạt được bằng chứng cho một giả thuyết hẹp về retention, chưa đạt mục tiêu cải thiện toàn diện TPOUR.')
+    heading('5.4. Ý nghĩa kết quả và những cách giải thích còn cạnh tranh')
+    para('SciFact tăng cùng top-10 overlap với baseline phù hợp với cơ chế giữ hành vi teacher. Tuy nhiên, tương quan này chưa chứng minh nguyên nhân duy nhất; regularization, thay đổi quỹ đạo tối ưu hoặc nhãn train có nhiễu cũng có thể ảnh hưởng. Kết quả gợi ý cần giữ đối chứng chỉ KL, đồng thời mở rộng seed và kiểm tra benchmark khác trước khi chọn thiết kế phức tạp hơn.')
+    para('Preference accuracy giảm là bằng chứng biến thể đang đánh đổi một phần mục tiêu mined để giữ retrieval tổng quát. Do nhãn chưa được thẩm định, chưa biết mức giảm phản ánh mất khả năng đúng thời gian hay chỉ không khớp proxy. Cả hai khả năng đều cần được xem xét: không thể bỏ qua proxy xấu, cũng không thể gọi proxy là chân lý về thời gian.')
+    para('Việc chưa vượt Contriever gốc cho thấy fine-tune hiện tại chưa tạo lợi ích ròng trên SciFact. Với tác vụ chỉ truy xuất khoa học tổng quát, chưa có căn cứ chọn retention thay cho baseline từ số liệu này. Với tác vụ cần thời gian, cần thêm tập temporal gold để đánh giá lợi ích cập nhật so với chi phí giữ kiến thức; SciFact một mình không đủ để quyết định.')
+    heading('5.5. Các rào cản còn lại và tác động đến độ tin cậy')
+    table(['Rào cản','Tác động','Cách xử lý cần làm tiếp'],[
+      ['Mẫu train nhỏ và mined labels','Khó khái quát; accuracy thấp có nhiều cách giải thích','Kiểm tra thủ công nhãn và mở rộng dữ liệu có nguồn/thời gian rõ'],
+      ['Thiếu article ID và temporal gold','Exact-text split chưa loại mọi leakage; chưa đo đúng mốc','Nhóm theo article/snapshot khi có metadata; xây test thời gian được thẩm định'],
+      ['Đã dùng SciFact khi thiết kế','Có benchmark-aware design bias dù không chọn checkpoint bằng test','Giữ benchmark mới chưa xem để đánh giá xác nhận'],
+      ['Ba seed, ablation một seed','CI theo query không bao quát mọi nguồn bất định','Lặp nhiều seed cho mọi nhánh, báo CI/SD đúng đơn vị'],
+      ['1.000 lần thử và cấu hình gọn','Chưa đại diện quá trình hội tụ hay cấu hình bài gốc','Theo dõi validation độc lập và so quy mô/lịch train có kiểm soát'],
+      ['Chi phí và tái lập môi trường','Teacher tăng train/memory; checkpoint lớn nằm ở Kaggle','Lưu phiên bản/hash và hướng dẫn tải; đo chi phí end-to-end khi mở rộng']])
+    para('Những rào cản này giới hạn phạm vi tuyên bố, không làm mất giá trị của toàn bộ thực nghiệm. Nhóm vẫn có thể chứng minh code chạy, số liệu có nguồn và biến thể có tác động đo được trong cấu hình cụ thể. Điều cần tránh là dùng kết quả đó để khẳng định mọi temporal retrieval đều được cải thiện hoặc mô hình không còn quên tri thức.')
+    heading('5.6. Kế hoạch phát triển theo thứ tự ưu tiên và tiêu chí kiểm chứng')
+    table(['Ưu tiên','Thí nghiệm đề xuất — chưa thực hiện','Tiêu chí quyết định'],[
+      ['1. Kiểm tra mục tiêu thời gian','Thẩm định mẫu mined với người đọc, ghi nhãn đúng/sai/không đủ thông tin; tách train/validation/test theo nguồn và thời gian','Có test temporal gold độc lập, quy tắc nhãn rõ và thống kê bất đồng'],
+      ['2. Xác nhận tính tổng quát','Cố định cấu hình trên validation; đánh giá benchmark chưa dùng khi thiết kế; lặp ablation KL và KL+MSE nhiều seed','Lợi ích lặp lại và báo cả kết quả giảm; không chọn tham số trên test'],
+      ['3. Giảm đánh đổi retention','Thử trọng số retention có điều kiện khi teacher mâu thuẫn với ưu tiên mới; so gamma=0, chỉ KL và biến thể điều kiện','Đánh giá đồng thời temporal quality, retrieval tổng quát và chi phí; loại nếu chỉ chuyển suy giảm sang mục tiêu khác'],
+      ['4. Mở rộng gần bài gốc','Dữ liệu nhiều snapshot, kiểm tra nội suy time embedding và lịch train dài hơn','Đối chiếu đúng bản PDF/protocol, báo độ lệch cấu hình và tài nguyên']])
+    para('Retention có điều kiện là một giả thuyết nghiên cứu tiếp theo, chưa có kết quả trong kho hiện tại. Không nên gán trọng số bằng nhãn test hoặc quyết định theo trực giác về một query; cần định nghĩa tín hiệu tại train/validation và giữ test độc lập. Chỉ khi có lợi ích đồng thời trên hai mục tiêu và chi phí chấp nhận được mới có cơ sở nói phương pháp toàn diện hơn.')
+    heading('5.7. Các câu hỏi trọng tâm khi bảo vệ đồ án')
+    for question,answer in [
+      ('Nhóm cải tiến gì so với việc chạy lại code?', 'Nhóm thêm teacher Contriever cố định và objective giữ phân bố xếp hạng/biểu diễn, rồi kiểm chứng bằng đối chứng ba seed, ablation và checkpoint thật. Runner/provenance là đóng góp kỹ thuật hỗ trợ kiểm chứng; không nên gọi riêng việc chuyển lên Kaggle là cải tiến thuật toán.'),
+      ('Nếu chưa vượt baseline thì cải tiến có ý nghĩa gì?', 'Ý nghĩa hiện có là hạn chế mức giảm do fine-tune so với TRPO trong cùng protocol. Đây là kết quả có giới hạn; nếu chỉ cần SciFact thì baseline vẫn có điểm cao hơn. Chưa có bằng chứng để khuyên thay baseline trong mọi ứng dụng.'),
+      ('Vì sao không dùng EMA reference làm teacher luôn?', 'EMA reference thay đổi theo student để phục vụ preference learning. Teacher cố định giữ mốc hành vi trước fine-tune. Nếu dùng chung, mục tiêu retention sẽ di chuyển theo quá trình học và không còn đúng thiết kế đã thử.'),
+      ('Có chắc MSE cần thiết và mô hình tốt hơn về thời gian?', 'Chưa chắc cả hai. Ablation một seed có CI chứa 0; preference proxy giảm, chưa có temporal gold. Nhóm báo rõ các kết quả này thay vì kết luận mọi thành phần đều hiệu quả.'),
+      ('Có tái lập đầy đủ bài báo chưa?', 'Chưa. Nhóm đã cài đặt bản gọn, train dữ liệu thật, đo SciFact và thử retention; chưa tái lập toàn bộ snapshot, temporal QA, time interpolation và quy mô tác giả.'),
+      ('Demo chứng minh điều gì?', 'Demo xác nhận checkpoint thực có thể mã hóa query và truy xuất corpus, với hash/top-k đối chiếu. Chất lượng được đánh giá trên toàn test; query mới chưa có gold nên chỉ minh họa hoạt động, không phải bằng chứng accuracy.')
+    ]:
+        x=para(question);x.runs[0].bold=True;para(answer)
     heading('PHỤ LỤC: MÃ NGUỒN, ĐẦU RA VÀ TÀI LIỆU THAM KHẢO',1)
     heading('A. Nguồn bằng chứng và lệnh kiểm tra')
     para('Kho nhóm: https://github.com/lequangduccode/tpour-trpo-experiments. Source train retention: 219a21a; source live demo: 0d2e084. Commit source cố định được lưu trong executed_source.ipynb/provenance, nên các thay đổi hình thức báo cáo sau đó không được nhầm với code dùng train.')
