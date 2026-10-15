@@ -1,5 +1,7 @@
 # Bộ tài liệu báo cáo TPOUR / TRPO
 
+Bản hiện hành ngày 15/10/2026: [báo cáo đúng mẫu PTIT](ptit_verified/Bao_cao_TPOUR_TRPO_PTIT_cap_nhat_da_ra_soat.docx), [PDF](ptit_verified/Bao_cao_TPOUR_TRPO_PTIT_cap_nhat_da_ra_soat.pdf), [slide 27 trang](presentation_final/Slide_thuyet_trinh_TPOUR_TRPO_cap_nhat.pptx), [PDF slide](presentation_final/Slide_thuyet_trinh_TPOUR_TRPO_cap_nhat.pdf). Dùng các file này khi nộp. Phần bên dưới mô tả bộ tài liệu lịch sử ngày 12/10, trước khi có full SciFact và retention; không dùng số liệu/giới hạn cũ thay bản cập nhật.
+
 Hoàn thiện ngày **12/10/2026**. Chủ đề là TPOUR/TRPO trong repository này.
 
 ## File để nộp và thuyết trình

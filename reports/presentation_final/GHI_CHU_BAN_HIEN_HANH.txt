@@ -1,0 +1,1 @@
+Bộ slide đã rà soát cùng báo cáo PTIT: 27 slide (1–21 chính, 22–27 phụ lục). Xem reports/ptit_verified/ để lấy báo cáo đúng mẫu. Công thức tạo bằng code từ biểu thức toán; biểu đồ từ JSON thực nghiệm, không dùng ảnh sinh AI.

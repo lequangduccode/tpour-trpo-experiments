@@ -79,7 +79,7 @@ fig.tight_layout();fig.savefig(OUT/'preference.png',dpi=180);plt.close(fig)
 s=slide('TPOUR / TRPO', 'Mở đầu: Nhóm tìm hiểu truy xuất thông tin có yếu tố thời gian. Em trình bày phương pháp của bài báo, phần nhóm đã triển khai và một biến thể giữ kiến thức đã được kiểm chứng. Kết quả có lợi trên SciFact so với TRPO nhưng còn đánh đổi. Thời lượng gợi ý 12–15 phút cho slide 1–19; slide 20–23 dùng khi hỏi.',source='Học phần Tìm kiếm và Truy xuất thông tin')
 box(s,'Thực nghiệm dữ liệu thật\nvà biến thể giữ kiến thức',.85,1.8,11.5,1.65,37,True)
 box(s,'Bài báo → Cài đặt → Đối chứng → Demo → Kết luận',.9,4.05,11.5,.6,24,color=GREY)
-box(s,'Mẫu Wikipedia của tác giả · SciFact · Kaggle T4',.9,5.35,11.5,.6,22,color=NAVY)
+box(s,'Nhóm 15 · M25CQHT02-B · Mẫu Wikipedia / SciFact / Kaggle T4',.9,5.35,11.5,.6,21,color=NAVY)
 
 s=slide('1. Vì sao cần quan tâm đến thời gian?', 'Ví dụ là tình huống giả định, không phải dữ liệu benchmark. Tài liệu giống chủ đề chưa chắc đáp ứng đúng mốc. Một quy định cũ vẫn có nhiều từ giống truy vấn về quy định mới. Bài toán cần học sự ưu tiên giữa tài liệu đúng mốc và lệch mốc.',source='Ví dụ minh họa của nhóm · Không dùng để đánh giá mô hình')
 box(s,'“Quy trình của tổ chức X năm 2020 là gì?”',.9,1.55,11.5,.8,29,True)
@@ -184,15 +184,59 @@ bullets(s,['Mở notebook live; nạp encoder.pt và corpus SciFact.','Chạy qu
 box(s,'Kaggle: vananh1911/tpour-live-checkpoint-verification',1.2,6,11,.4,18,color=GREY)
 
 s=slide('Nguồn để đối chiếu', 'Tài liệu gốc nằm trong repo, cùng PDF đã chọn. Notebook Kaggle có thể cần quyền tài khoản; JSON/log/notebook source công khai trong GitHub cho phép đọc bằng chứng. Slide 1–19 là phần trình bày chính; 20–23 là phụ lục.',source='Tài liệu và mã nguồn của báo cáo',appendix=True)
-bullets(s,['Bài TPOUR: upstream/TPOUR/ICML_2026_TPOUR.pdf','Code: tpour.py, real_experiment.py, anchored_tpour.py','Kết quả: results/anchored_kaggle/','Báo cáo: reports/revised_main/'],size=23,gap=.87)
+bullets(s,['Bài TPOUR: upstream/TPOUR/ICML_2026_TPOUR.pdf','Code: tpour.py, real_experiment.py, anchored_tpour.py','Kết quả: results/anchored_kaggle/','Báo cáo đúng mẫu PTIT: reports/ptit_verified/'],size=23,gap=.87)
 box(s,'github.com/lequangduccode/tpour-trpo-experiments',1.2,5.6,11,.5,22,True,NAVY)
+
+# Restore paper equations that a concise first deck omitted. Reorder together with notes.
+def move_last(index):
+    ids=prs.slides._sldIdLst;item=ids[-1];ids.remove(item);ids.insert(index,item)
+    note=notes.pop();notes.insert(index,note)
+
+s=slide('Công thức nền: CE và TRPO', 's là dot product chưa chia nhiệt độ; Δ là chênh lệch score đã chia T. CE hiển thị cho một query, code trung bình theo batch. k_j là negative key reference trong queue. TRPO có reference gap detach và β=0,3, T=0,05. Khi hai gap bằng nhau, loss ln2 nhưng gradient student chưa bằng0. Đây là công thức bản gọn đối chiếu mục3.1, không phải weighted KL hoặc PPO.',source='Bài TPOUR [1], phương trình (3)–(4) · tpour.py:trpo_loss và TPOUR.forward')
+picture(s,mathfig(r'$\mathcal{L}_{CE}(q)=-\log\frac{e^{q^\top p/T}}{e^{q^\top p/T}+\sum_{j\in\mathcal{Q}} e^{q^\top k_j/T}}$','ce_formula.png'),1,1.45,11.3,1.25)
+picture(s,mathfig(r'$\Delta_\theta=\frac{s_\theta(Q,D^+)-s_\theta(Q,D^-)}{T}$','gap_formula.png'),1,3,11.3,.9)
+picture(s,mathfig(r'$\mathcal{L}_{TRPO}=-\frac{1}{B}\sum_{i=1}^{B}\log\sigma\!\left[\beta(\Delta_\theta^{(i)}-\Delta_{ref}^{(i)})\right]$','trpo_formula.png'),1,4.3,11.3,1.15)
+takeaway(s,'s(Q,D) là dot product; T=0,05; reference không nhận gradient trực tiếp.')
+move_last(3)
+
+s=slide('Time vector: nội dung của bài báo, chưa tái lập đủ', 'Nội suy trọng số giữa hai encoder chuyên biệt thời gian cùng nền, không phải chèn year embedding vào query. Hai checkpoint toy từng nội suy chỉ là kiểm tra thao tác tensor, không đại diện 2018 và2021. Điều kiện là cùng kiến trúc, pretrained base, tokenizer và metadata tương thích. Phải mã hóa lại corpus sau khi đổi encoder; nhóm chưa kiểm chứng chất lượng nội suy trên temporal gold.',source='Bài TPOUR [1], mục 3.2, phương trình (5) · Báo cáo PTIT mục 2.6')
+picture(s,mathfig(r'$\tau_t=\theta_t-\theta_{base}$','time_vector.png'),1,1.8,11.3,.95)
+picture(s,mathfig(r'$\theta_{mid}=\theta_{base}+(1-\alpha)\tau_{left}+\alpha\tau_{right}$','time_interpolation.png'),1,3.1,11.3,1)
+box(s,'Hai checkpoint phải cùng nền; đổi encoder cần mã hóa lại corpus.',1,4.8,11.3,.85,24)
+takeaway(s,'Đã có kiểm tra phép nội suy tensor; chưa có kết quả temporal interpolation thật.')
+move_last(4)
+
+s=slide('Hỏi đáp · KL và relative MSE tính trên gì?', 'Đây là công thức chính xác theo anchored_tpour.retention_loss. B query;2B preferred/rejected trong batch;3B embedding gồm query/preferred/rejected. KL(teacher||student) lấy batchmean; MSE tương đối lấy mean3B. Cùng input augmentation, teacher detach. Tr=0,1; epsilon=1e-6. Không có nhãn qrels test hoặc dữ liệu truy xuất ngoài batch đưa vào hai hạng này.',source='anchored_tpour.py:retention_loss · Báo cáo PTIT mục 3.4',appendix=True)
+picture(s,mathfig(r'$P_{aij}=\frac{\exp(\cos(q_{ai},d_{aj})/T_r)}{\sum_{\ell=1}^{2B}\exp(\cos(q_{ai},d_{a\ell})/T_r)}$','distribution.png'),1,1.45,11.3,1.25)
+picture(s,mathfig(r'$\mathcal{L}_{KL}=\frac{1}{B}\sum_{i=1}^{B}\sum_{j=1}^{2B}P_{tij}\log\frac{P_{tij}}{P_{sij}}$','kl_formula.png'),1,3.05,11.3,1)
+picture(s,mathfig(r'$\mathcal{L}_{rep}=\frac{1}{3B}\sum_{u=1}^{3B}\frac{\|z_{s,u}-z_{t,u}\|_2^2}{\max(\|z_{t,u}\|_2^2,10^{-6})}$','mse_formula.png'),1,4.45,11.3,1.15)
+takeaway(s,'a∈{student, teacher}; B=4; Tr=0,1. Teacher targets được detach.')
+move_last(len(prs.slides)-2)
+
+s=slide('Hỏi đáp · Có dùng context ngoài vào train không?', 'Rà code và provenance:train đọc train.jsonl xuất từ mẫu tác giả; queue và teacher targets tạo trên cùng dữ liệu đó. SciFact corpus/query/qrels là nguồn đánh giá riêng. Demo chỉ truy xuất corpus SciFact, không gọi web search hay LLM sinh context. Chỉ khẳng định pipeline đã rà soát; chưa thể kiểm toán toàn bộ dữ liệu tiền huấn luyện hoặc mọi trùng ngữ nghĩa. SciFact đã được xem khi thiết kế retention nên vẫn có design bias.',source='real_experiment.py:clean_rows/train · live_retrieval_demo.py · data_manifest.json',appendix=True)
+table(s,['Nguồn','Vai trò','Có cập nhật gradient?'],[['Mẫu Wikipedia tác giả','Train split 2.543 bộ ba','Có'],['Held-out mined','449 bộ ba đo proxy','Không'],['SciFact / qrels','Đánh giá và truy xuất demo','Không'],['Contriever tiền huấn luyện','Khởi tạo model / teacher','Student được fine-tune']],widths=[3.5,4.6,3.5],rowh=.8,size=22)
+takeaway(s,'Không thấy bước gọi web/LLM để bổ sung context trong pipeline đã chạy.')
+move_last(len(prs.slides)-2)
+
+# Fix footer numbers after insertion; keep main/appendix guidance consistent.
+for i,s in enumerate(prs.slides,1):
+    for sh in s.shapes:
+        if sh.has_text_frame and sh.left>Inches(12) and sh.top>Inches(7):sh.text=str(i)
+        if sh.has_text_frame:
+            for p in sh.text_frame.paragraphs:
+                for r in p.runs:
+                    if sh.left>Inches(12) and sh.top>Inches(7):r.font.name='Arial';r.font.size=Pt(12)
+main_count=sum(not n[2] for n in notes)
+for i,(title,note,ap) in enumerate(notes):
+    note=note.replace('slide 1–19; slide 20–23',f'slide 1–{main_count}; slide {main_count+1}–{len(notes)}').replace('Slide 1–19',f'Slide 1–{main_count}').replace('20–23',f'{main_count+1}–{len(notes)}').replace('19–22',f'{main_count+1}–{len(notes)}')
+    notes[i]=(title,note,ap);prs.slides[i].notes_slide.notes_text_frame.text=note
 prs.save(OUT/'Slide_thuyet_trinh_TPOUR_TRPO_cap_nhat.pptx')
 
 doc=Document()
 for st in ['Normal','Title','Heading 1','Heading 2']:doc.styles[st].font.name='Arial'
 doc.styles['Normal'].font.size=WP(11)
 doc.add_heading('GỢI Ý THUYẾT TRÌNH TPOUR / TRPO',0)
-doc.add_paragraph('Slide 1–19: phần trình bày chính khoảng 12–15 phút. Slide 20–23: mở khi cần hỏi đáp. Đây là gợi ý để nói bằng lời của mình, không cần đọc nguyên văn.')
+doc.add_paragraph(f'Slide 1–{main_count}: phần trình bày chính khoảng 14–17 phút. Slide {main_count+1}–{len(notes)}: mở khi cần hỏi đáp. Đây là gợi ý để nói bằng lời của mình, không cần đọc nguyên văn.')
 doc.add_paragraph('Trước buổi nói: điền thông tin nhóm nếu cần; kiểm tra quyền notebook, tải checkpoint, tạo corpus cache trước và thử mở PowerPoint trên máy trình chiếu. Các biểu đồ lấy từ kết quả thực; không dùng ảnh sinh bằng AI hoặc giao diện web giả.')
 for i,(title,note,ap) in enumerate(notes,1):
     doc.add_heading(f'{i:02d}. {title}'+(' [phụ lục]' if ap else ''),2);doc.add_paragraph(note)

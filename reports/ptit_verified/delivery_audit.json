@@ -1,0 +1,111 @@
+{
+  "template_unchanged": true,
+  "cover_roster_matches_template": true,
+  "native_math_objects": 31,
+  "equation_families_checked": [
+    "Encoder/mean pooling",
+    "CE/TRPO",
+    "Time vector / interpolation",
+    "IR metrics",
+    "EMA",
+    "Ranking distribution / KL",
+    "Representation / total retention"
+  ],
+  "report_docx_sha256": "ecf7104165c75111f8bd70156a582d1829076d5d11ec7025e79517564809fb1c",
+  "report_pdf_sha256": "a031169f426bf17377138b290f552f312c67bfe533675a91ddbdbc20d2c86017",
+  "report_pages": 33,
+  "slides": 27,
+  "main_slides": 21,
+  "appendix_slides": 6,
+  "speaker_notes_all_slides": true,
+  "powerpoint_text_overflow": [],
+  "slide_pptx_sha256": "7e4c6220aa6dc0c897172ba6764ee2f135196a272b143ac9491b0508a035552b",
+  "lineage": {
+    "author_sample_sha256": "5c5069ab1495d58450bd2aa4134bc291e4e7a3790cdd3c5e98b61875286efd5f",
+    "cleaning_recomputed": {
+      "input": 3000,
+      "missing_context": 4,
+      "invalid_text": 0,
+      "identical_pair": 4,
+      "duplicate_triplet": 0,
+      "valid": 2992
+    },
+    "split_recomputed": {
+      "components": 2855,
+      "largest_component": 14,
+      "train_rows": 2543,
+      "heldout_rows": 449,
+      "cross_split_exact_text_overlap": 0,
+      "limitation": "Exact-text grouping only; shared articles, excerpts and paraphrases may still overlap."
+    },
+    "train_serialization_sha256_matches_saved_runs": "e5b0b361f4b2b92354780223a52cf9e5c668be37b7d1ec19e28879fac8da9ab5",
+    "scifact_local_hashes_match_evaluation": {
+      "corpus.jsonl": "dec31c8182f3d744c7d2c09423756fd1d17cbef75808db13ba01cc0aab4d1ac6",
+      "queries.jsonl": "8ff84a7c903f722981cd8d595c022660140c51867b27608a6d4910db86080313",
+      "qrels/test.tsv": "0864bb985e0ca2367ba217977e72004d549054b2b06666ed9d4825ac7c21284c"
+    }
+  },
+  "scope_of_code_review": {
+    "train": "Reads prepared train.jsonl from author sample. Queue warmup/keys and fixed-teacher inputs use that train split.",
+    "evaluation": "SciFact title+text, queries and qrels; custom binary metrics. Qrels are not used in training objective.",
+    "demo": "Exact retrieval from SciFact corpus; no web-search or LLM context-generation call in reviewed live_retrieval_demo.py.",
+    "declared_external_dependencies": "Pretrained facebook/contriever and tokenizer, author sample, official BEIR SciFact distribution; KD references support the extension only.",
+    "limits": "Static code/data/hash audit plus exported evidence, not a new GPU training reproduction. Cannot audit complete pretrained data or exclude semantic/article overlap. SciFact-aware design bias remains."
+  },
+  "validation_this_revision": {
+    "unit_tests": "14 tests passed in the terminal during this revision.",
+    "result_verifier": {
+      "checks": [
+        {
+          "run": "baseline",
+          "metric_recomputation": "passed",
+          "queries": 300
+        },
+        {
+          "run": "tpour_seed42",
+          "metric_recomputation": "passed",
+          "queries": 300
+        },
+        {
+          "run": "anchored_seed42",
+          "metric_recomputation": "passed",
+          "queries": 300
+        },
+        {
+          "run": "tpour_seed43",
+          "metric_recomputation": "passed",
+          "queries": 300
+        },
+        {
+          "run": "anchored_seed43",
+          "metric_recomputation": "passed",
+          "queries": 300
+        },
+        {
+          "run": "tpour_seed44",
+          "metric_recomputation": "passed",
+          "queries": 300
+        },
+        {
+          "run": "anchored_seed44",
+          "metric_recomputation": "passed",
+          "queries": 300
+        },
+        {
+          "run": "ranking_only_seed42",
+          "metric_recomputation": "passed",
+          "queries": 300
+        }
+      ],
+      "paired_controls": "passed",
+      "paired_bootstrap_recomputation": "passed",
+      "checkpoint_note": "Hashes agree between train and evaluation records; actual large checkpoint files not independently downloaded here.",
+      "limit": "Confirms exported metrics and protocol; not independent reproduction of training or temporal gold evaluation.",
+      "live_inference_evidence": "Four live runs match saved top3 and corpus/checkpoint hashes; checkpoint hashes were computed in the separate GPU inference job."
+    }
+  },
+  "sources_verified_for_theory_extension": [
+    "https://arxiv.org/abs/1606.09282",
+    "https://arxiv.org/abs/2406.05977"
+  ]
+}

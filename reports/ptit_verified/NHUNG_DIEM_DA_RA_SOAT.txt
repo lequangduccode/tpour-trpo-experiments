@@ -1,0 +1,43 @@
+BẢN RÀ SOÁT TPOUR/TRPO — 15/10/2026
+
+DÙNG BẢN NÀO
+Báo cáo: Bao_cao_TPOUR_TRPO_PTIT_cap_nhat_da_ra_soat.docx / .pdf
+Slide: Slide_thuyet_trinh_TPOUR_TRPO_cap_nhat.pptx / .pdf
+Gợi ý lời nói: Goi_y_thuyet_trinh_TPOUR_TRPO.docx / .pdf
+
+NỀN TÀI LIỆU
+Dựng từ đúng file reports/ptit_updated/Bao_cao_TPOUR_TRPO_da_sua_cong_thuc.docx.
+Giữ bìa PTIT, giảng viên, lớp, nhóm 15, thành viên và mẫu hai section. File nguồn không bị sửa.
+Bản reports/revised_main/ trước đó dùng một mẫu khác nên không còn là bản khuyến nghị để nộp.
+
+CÁC ĐIỂM ĐÃ SỬA
+1. Giữ cơ sở TPOUR, khôi phục time vectors/nội suy, độ đo; bổ sung AP/MAP và công thức phân bố KL.
+2. Word có 31 đối tượng Office Math (gồm cả ký hiệu inline), đã mở/lưu bằng Word và xuất PDF.
+   Số đối tượng không phải số công thức khác nhau; bản cũ có các lần nhắc lặp lại ở những chương đã thay.
+3. Cập nhật phần tóm tắt, phạm vi, dữ liệu, Chương 3–5 từ log/hash/metrics thật. Số 20 bước/30 query chỉ giữ như lịch sử.
+4. Bổ sung bảng đối chiếu upstream và runner hiện tại. Runner mới có warmup/linear decay và resume.
+5. Tách bài báo gốc, biến thể teacher/retention của nhóm và hướng chưa thực hiện. Bỏ các ý tưởng liệt kê lan man chưa có thử nghiệm.
+6. Chuyển câu hỏi bảo vệ sang phụ lục; giữ phân tích mục tiêu/kết quả, rào cản và kế hoạch trong Chương 5.
+7. Slide bổ sung CE/TRPO, time vector, KL/MSE; có 21 slide chính và 6 slide hỏi đáp; tất cả có Notes.
+8. Sửa README để trỏ bản PTIT mới, tránh tải nhầm bản lịch sử.
+
+KẾT LUẬN KIỂM TRA CONTEXT/DỮ LIỆU
+- Train: question và context đầu tiên của positive_ctxs/weak_positive_ctxs trong mẫu tác giả.
+  Tính lại ra 2.992 bộ ba, 2.543 train/449 held-out. Hash train xuất lại khớp provenance các run.
+- Queue và teacher dùng dữ liệu train; không thấy bước lấy web/LLM context trong pipeline train đã rà.
+- SciFact là nguồn ngoài mẫu Wikipedia có khai báo để đánh giá/demo. Qrels không dùng cập nhật gradient.
+- Live demo truy xuất title+text trong corpus SciFact, không sinh đáp án hay lấy context từ web search.
+- Có tải Contriever/tokenizer tiền huấn luyện; chưa kiểm toán toàn bộ dữ liệu tiền huấn luyện.
+- Không bảo đảm loại hết trùng bài/diễn đạt lại. SciFact đã được xem khi thiết kế retention nên vẫn có design bias.
+- Các nguồn KD bổ trợ được dẫn riêng, không thay thế bài TPOUR hoặc được coi là phương pháp đã tái lập.
+
+KẾT QUẢ PHẢI GIỮ ĐÚNG KHI THUYẾT TRÌNH
+nDCG@10: TRPO 0,60035; retention 0,62907; Contriever gốc 0,63935.
+Mined-preference accuracy: 0,44915 -> 0,42910 (giảm).
+Chỉ kết luận hạn chế suy giảm retrieval so với TRPO trong cấu hình này, chưa cải thiện toàn diện temporal retrieval.
+
+ĐÃ KIỂM TRA
+14 tests code qua; tính lại metrics/CI từ rankings và qrels qua; hash dữ liệu khớp.
+Word/PDF đã render, mục lục cập nhật; PowerPoint không phát hiện tràn chữ. Công thức được kiểm tra bằng XML và trang render.
+Rà soát này không phải chạy lại huấn luyện GPU. Checkpoint lớn vẫn ở Kaggle Output; chỉ xác nhận bằng chứng đã lưu và code.
+Chi tiết máy đọc: delivery_audit.json, report_audit.json, word_render_check.json.

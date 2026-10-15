@@ -6,13 +6,13 @@ Biến thể **thêm fixed-teacher retention vào TPOUR**: [phương pháp và k
 
 ## Báo cáo và slide thuyết trình
 
-Bộ tài liệu hoàn thiện ngày 12/10/2026 nằm tại [reports/](reports/README.md): [báo cáo Word chi tiết](reports/Bao_cao_chi_tiet_TPOUR_TRPO.docx), [bản DOC](reports/Bao_cao_chi_tiet_TPOUR_TRPO.doc), [PDF](reports/Bao_cao_chi_tiet_TPOUR_TRPO.pdf), [PowerPoint 19 slide](reports/Slide_thuyet_trinh_TPOUR_TRPO.pptx), [kịch bản thuyết trình](reports/Kich_ban_thuyet_trinh_TPOUR_TRPO.docx) và ảnh chụp demo. Có kết quả chạy bổ sung ba seed và log gốc; chưa đánh giá BEIR đầy đủ. Điền thông tin sinh viên/giảng viên trên bìa trước khi nộp.
+Bản hiện hành được rà soát ngày 15/10/2026, dựng từ đúng file mẫu PTIT nhóm cung cấp: [báo cáo Word](reports/ptit_verified/Bao_cao_TPOUR_TRPO_PTIT_cap_nhat_da_ra_soat.docx), [PDF báo cáo](reports/ptit_verified/Bao_cao_TPOUR_TRPO_PTIT_cap_nhat_da_ra_soat.pdf), [PowerPoint 27 slide](reports/presentation_final/Slide_thuyet_trinh_TPOUR_TRPO_cap_nhat.pptx), [PDF slide](reports/presentation_final/Slide_thuyet_trinh_TPOUR_TRPO_cap_nhat.pdf), [gợi ý thuyết trình](reports/presentation_final/Goi_y_thuyet_trinh_TPOUR_TRPO.docx). Slide 1–21 trình bày chính, 22–27 hỏi đáp. [Bản ghi rà soát](reports/ptit_verified/delivery_audit.json) kiểm tra các nhóm công thức, dữ liệu và số liệu thống nhất. Các tài liệu trong `reports/` gốc và `reports/revised_main/` là phiên bản trước; dùng bản PTIT này khi nộp.
 
 Tải repository bằng `git clone <URL-repository>`. Mã nguồn tác giả được lưu trực tiếp trong `upstream/TPOUR/`, không cần lệnh submodule. Nguồn, commit gốc và hash từng file được ghi trong [upstream/UPSTREAM.json](upstream/UPSTREAM.json).
 
 Bộ mã thử nghiệm một thiết bị, có thể chạy trên CPU hoặc GPU. Mã chính thức được giữ tại `upstream/TPOUR`; bản triển khai gọn nằm trong `tpour.py`. Đây là bản thực hành, chưa phải tái lập toàn bộ kết quả công bố.
 
-Đã chạy thành công demo, 5 kiểm tra tự động và 2 bước huấn luyện `facebook/contriever` trên 8 mẫu từ dữ liệu tác giả. Checkpoint thật ở `outputs/contriever_smoke/encoder.pt`. Báo cáo nằm trong `BAO_CAO_THUC_NGHIEM.txt`; BEIR đầy đủ chưa chạy.
+Giai đoạn hiện tại có 14 kiểm tra code, train Wikipedia thật trên Kaggle (2.543 train/449 held-out), ba seed CE+TRPO/retention và ablation chỉ KL một seed. Đã đánh giá đủ **SciFact 300 query/5.183 tài liệu**, chưa phải toàn bộ các dataset BEIR hoặc temporal QA của bài báo. Mean nDCG@10: TRPO 0,60035; retention 0,62907; Contriever gốc 0,63935. Preference proxy giảm 0,44915 → 0,42910; chưa kết luận cải thiện toàn diện. Bằng chứng ở [results/anchored_kaggle/](results/anchored_kaggle/), checkpoint lớn ở Kaggle Output. Demo toy, smoke 2 bước và log 20 bước/30 query là lịch sử triển khai.
 
 Các file JSON kết quả và cấu hình đã chạy được lưu tại `results/` để xem trực tiếp trên GitHub. Checkpoint và môi trường `.venv` nằm trên máy thực nghiệm; chạy lại các lệnh bên dưới để tạo lại chúng. Trên máy mới, cài Python và chạy `python -m pip install -r requirements.txt` trước khi chạy demo hoặc kiểm tra.
 
@@ -86,12 +86,12 @@ Code tính `(1-alpha)*theta_left + alpha*theta_right`, tương đương nội su
 
 TRPO có phần chênh lệch điểm của encoder tham chiếu; reference không nhận gradient và cập nhật bằng momentum. Queue chứa embeddings reference của positive và negative. Loss tổng là `lambda*CE + (1-lambda)*TRPO`. Kiểm tra tự động gồm chiều gradient ưu tiên, tách gradient reference, wrap queue, momentum, số đo retrieval và định dạng dữ liệu tác giả.
 
-Các lựa chọn riêng của bản gọn: reference ở eval mode; CE dùng positive từ encoder hiện tại và queue cũ; queue khởi động bằng dữ liệu thật; không bổ sung in-batch negatives; optimizer learning rate cố định; checkpoint chỉ phục vụ inference, không resume toàn bộ trạng thái train. Vì thế không xem kết quả bản gọn là kết quả của code upstream. `src/moco.py` upstream có thêm in-batch positives/negatives và cách chia temperature khác giữa CE và TRPO.
+Các lựa chọn riêng của bản gọn: reference ở eval mode; CE dùng positive từ encoder hiện tại và queue cũ; queue khởi động bằng dữ liệu thật; không bổ sung in-batch negatives CE. Lệnh train cũ trong `tpour.py` dùng LR cố định và checkpoint inference; runner mới `real_experiment.py` có warmup/linear decay và lưu đủ trạng thái resume. `src/moco.py` upstream có thêm in-batch positives/negatives và cách chia temperature khác giữa CE và TRPO. Không xem bản gọn là tái lập nguyên cấu hình upstream; bảng đối chiếu cập nhật ở mục 3.11 báo cáo PTIT.
 
 Không thể xác nhận TPOUR dễ nhất trong 11 bài vì thư mục ban đầu trống. Cũng chưa có phép đo GPU để khẳng định cấu hình RTX 3090 chạy được thiết lập tái lập đầy đủ.
 
 ## Nguồn
 
-- [Bài báo gốc](https://arxiv.org/abs/2606.17664), mục 3 và phụ lục A.
+- [Bản PDF TPOUR nhóm chọn](upstream/TPOUR/ICML_2026_TPOUR.pdf), 33 trang; mục 3.1–3.3, phương trình (3)–(5) và Hình 2. Số liệu và lý thuyết báo cáo bám bản PDF này.
 - [Repository chính thức](https://github.com/agwaBom/TPOUR), commit `d1d8e70326deae6ef2ea03a8cb2c0cbc60db7a78`.
 - [BEIR](https://github.com/beir-cellar/beir) và [Contriever](https://github.com/facebookresearch/contriever).
