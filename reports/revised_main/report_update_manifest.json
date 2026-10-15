@@ -1,0 +1,10 @@
+{
+  "original": "C:\\Users\\Admin\\Downloads\\Bao_cao_chi_tiet_TPOUR_TRPO (1).docx",
+  "original_sha256": "b0ce18635fe9331dd80625e4dd8a6bbc0b8a0fc68f780564f92a4c65338b778f",
+  "output": "reports\\revised_main\\Bao_cao_TPOUR_TRPO_cap_nhat_Kaggle_retention.docx",
+  "output_sha256": "0c5690af7bab2879fb77db3d3a6902c0e7feab18cb446defef89976b7a5d77ec",
+  "format": "Original cover, assignment placeholders, chapter1/2 styles and native equations retained; chapters3–5 and appendices rewritten from verified evidence.",
+  "source_train_commit": "219a21a",
+  "source_live_commit": "0d2e084",
+  "original_unchanged": true
+}
